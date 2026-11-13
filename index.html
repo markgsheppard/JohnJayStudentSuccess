@@ -437,8 +437,7 @@ a{color:#232C64}a:hover{color:#161C40}
 </ol>
 
 <h3 style="margin: 0 0 6px; font-size: 20px">Where to submit</h3>
-<p style="margin: 0; font-size: 15px; color: #525D69">Deadlines shown are the usual timing. Confirm the current call for papers before you submit.</p>
-<h4 style="margin: 28px 0 14px; font-size: 17px; letter-spacing: 0.4px; color: #525D69">At your college and across CUNY</h4>
+<p style="margin: 0 0 16px; font-size: 15px; color: #525D69">Start at your own college, then look outward. Deadlines shown are the usual timing; confirm the current call for papers before you submit.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px">
 <div style="border: 1px solid #DCE1E7; border-top: 5px solid #00AEEF; padding: 22px; display: flex; flex-direction: column; gap: 8px">
 <span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #525D69">JOHN JAY COLLEGE</span>
@@ -465,6 +464,8 @@ a{color:#232C64}a:hover{color:#161C40}
 <a href="https://academicworks.cuny.edu/submit_research.html" target="_blank" rel="noopener" style="margin-top: auto; font-weight: 600; font-size: 15px">Submit your research ↗</a>
 </div>
 </div>
+<sc-if value="{{ pubT.open }}" hint-placeholder-val="{{ false }}">
+<div>
 <h4 style="margin: 28px 0 14px; font-size: 17px; letter-spacing: 0.4px; color: #525D69">Undergraduate economics journals</h4>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px">
 <div style="border: 1px solid #DCE1E7; border-top: 5px solid #232C64; padding: 22px; display: flex; flex-direction: column; gap: 8px">
@@ -525,6 +526,18 @@ a{color:#232C64}a:hover{color:#161C40}
 <a href="https://www.nyseconomicsassociation.org" target="_blank" rel="noopener" style="margin-top: auto; font-weight: 600; font-size: 15px">Competition details ↗</a>
 </div>
 </div>
+</div>
+</sc-if>
+<sc-if value="{{ pubT.show }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; justify-content: center; margin-top: 14px">
+<sc-if value="{{ pubT.closed }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ pubT.flip }}" aria-expanded="false" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 8px; background: none; border: 0; color: #232C64; cursor: pointer; display: inline-flex; align-items: center; gap: 8px">Show 9 journals, competitions and conferences <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,5 7,10 12,5"/></svg></button>
+</sc-if>
+<sc-if value="{{ pubT.open }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ pubT.flip }}" aria-expanded="true" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 8px; background: none; border: 0; color: #232C64; cursor: pointer; display: inline-flex; align-items: center; gap: 8px">Show fewer <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,9 7,4 12,9"/></svg></button>
+</sc-if>
+</div>
+</sc-if>
 </section>
 
 <!-- 6. Funding -->
@@ -604,6 +617,16 @@ a{color:#232C64}a:hover{color:#161C40}
 <span>{{ r.sponsor }}</span><span>{{ r.who }}</span><span>{{ r.award }}</span><span>{{ r.deadline }}</span>
 </div>
 </sc-for>
+<sc-if value="{{ fundT.show }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; justify-content: center; margin-top: 10px">
+<sc-if value="{{ fundT.closed }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ fundT.flip }}" aria-expanded="false" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 8px; background: none; border: 0; color: #232C64; cursor: pointer; display: inline-flex; align-items: center; gap: 8px">Show all {{ fundT.total }} <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,5 7,10 12,5"/></svg></button>
+</sc-if>
+<sc-if value="{{ fundT.open }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ fundT.flip }}" aria-expanded="true" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 8px; background: none; border: 0; color: #232C64; cursor: pointer; display: inline-flex; align-items: center; gap: 8px">Show fewer <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,9 7,4 12,9"/></svg></button>
+</sc-if>
+</div>
+</sc-if>
 </div>
 </div>
 </div>
@@ -715,12 +738,15 @@ const STABS = [["all","All (9)"],["Undergraduate","Undergraduate (7)"],["Graduat
 const TABS = [["all","All"],["bc","John Jay"],["cuny","CUNY"],["ext","External"],["summer","Summer"],["travel","Travel & conferences"]];
 const FACULTY = [{"name": "J. W. Mason", "title": "Associate Professor · Department Chair", "areas": "Macroeconomics, money and finance. Fellow at the Roosevelt Institute.", "office": "Haaren Hall 336-12 · 212.393.6863", "email": "jomason@jjay.cuny.edu", "mail": "mailto:jomason@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/j-w-mason"}, {"name": "Ian J. Seda-Irizarry", "title": "Associate Professor · Graduate Program Director", "areas": "Political economy, economic history, history of economic thought, development and macroeconomics.", "office": "Haaren Hall 336-17 · 212.393.6425", "email": "iseda@jjay.cuny.edu", "mail": "mailto:iseda@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/ian-j-seda-irizarry"}, {"name": "Geert Dhondt", "title": "Associate Professor · Economics Major/Minor Advisor", "areas": "The economics of crime and justice, including race, neoliberal capitalism and the criminal justice system.", "office": "Haaren Hall 336-13 · 646.557.4845", "email": "gdhondt@jjay.cuny.edu", "mail": "mailto:gdhondt@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/geert-dhondt"}, {"name": "Michelle Holder", "title": "Professor", "areas": "Labor economics, labor market discrimination and wage gaps.", "office": "212.393.6480", "email": "mholder@jjay.cuny.edu", "mail": "mailto:mholder@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/michelle-holder"}, {"name": "Christian Parenti", "title": "Professor", "areas": "American economic history and environmental history.", "office": "646.557.4441", "email": "cparenti@jjay.cuny.edu", "mail": "mailto:cparenti@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/christian-parenti"}, {"name": "Jay Hamilton", "title": "Associate Professor", "areas": "The economics of crime and illegal drug markets.", "office": "Haaren Hall 336-14", "email": "jhamilton@jjay.cuny.edu", "mail": "mailto:jhamilton@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/jay-hamilton"}, {"name": "Lygia Sabbag Fares", "title": "Assistant Professor", "areas": "Feminist political economy, labor economics, working time, platform work, and gender and labor markets.", "office": "", "email": "lsabbagfares@jjay.cuny.edu", "mail": "mailto:lsabbagfares@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/lygia-sabbag-fares"}, {"name": "Caitlin Kline", "title": "Assistant Professor", "areas": "Ecological economics: climate change, oceans and fisheries, extractivism and environmental justice.", "office": "646.781.5206", "email": "ckline@jjay.cuny.edu", "mail": "mailto:ckline@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/caitlin-kline"}];
 class Component extends DCLogic {
-constructor(props){ super(props); this.state = { fund: "all", sent: false, grad: "ms", schol: "all", fac: "any", captcha: false, capErr: false }; }
+constructor(props){ super(props); this.state = { fund: "all", sent: false, grad: "ms", schol: "all", fac: "any", captcha: false, capErr: false, fundOpen: false, pubOpen: false, scholOpen: false }; }
 renderVals() {
 const f = this.state.fund;
 const sc = this.state.schol;
+const fundAll = FUND.filter(r => f === "all" || r.tags.indexOf(f) > -1);
+const scholAll = SCHOL.filter(s => sc === "all" || s.level === sc);
+const tog = (key, total, limit) => ({ show: total > limit, open: !!this.state[key], closed: !this.state[key], total: total, flip: () => this.setState({ [key]: !this.state[key] }) });
 return {
-scholarships: SCHOL.filter(s => sc === "all" || s.level === sc),
+scholarships: scholAll.slice(0, this.state.scholOpen ? scholAll.length : 3),
 scholTabs: STABS.map(t => ({ label: t[1], active: sc === t[0], inactive: sc !== t[0], pick: () => this.setState({ schol: t[0] }) })),
 faculty: FACULTY,
 showMS: this.state.grad === "ms",
@@ -728,8 +754,11 @@ showPhD: this.state.grad === "phd",
 pickMS: () => this.setState({ grad: "ms" }),
 pickPhD: () => this.setState({ grad: "phd" }),
 featured: FEATURED,
-fundTabs: TABS.map(t => ({ label: t[1], active: f === t[0], inactive: f !== t[0], pick: () => this.setState({ fund: t[0] }) })),
-fundRows: FUND.filter(r => f === "all" || r.tags.indexOf(f) > -1),
+fundTabs: TABS.map(t => ({ label: t[1], active: f === t[0], inactive: f !== t[0], pick: () => this.setState({ fund: t[0], fundOpen: false }) })),
+fundRows: fundAll.slice(0, this.state.fundOpen ? fundAll.length : 5),
+fundT: tog("fundOpen", fundAll.length, 5),
+pubT: tog("pubOpen", 99, 0),
+scholT: tog("scholOpen", scholAll.length, 3),
 sent: this.state.sent,
 notSent: !this.state.sent,
 fac: this.state.fac,
