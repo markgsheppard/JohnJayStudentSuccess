@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>John Jay Economics: All Opportunities</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;800;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#232C64}a:hover{color:#161C40}
+*{box-sizing:border-box}
+</style>
+<script src="gate.js"></script>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="background: #1D242C; color: #7FD6F7; font-family: Arial, sans-serif; font-size: 14px; text-align: center; padding: 8px 16px">Design prototype: a proposed Student Success page for the John Jay College Department of Economics. Not an official jjay.cuny.edu page.</div>
+<div style="font-family: 'Open Sans', Arial, sans-serif; color: #1D242C; font-size: 17px; line-height: 1.55; background: #FFFFFF">
+
+<div style="background: #161C40; color: #FFFFFF; font-size: 14px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Request Information</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Visit</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Apply</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Give</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Contact</a>
+</div>
+</div>
+
+<header style="background: #232C64; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<a href="index.html" style="color: #FFFFFF; text-decoration: none; display: flex; flex-direction: column; line-height: 1.1">
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700">John Jay College</span>
+<span style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #7FD6F7">The City University of New York</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 16px; font-weight: 600">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Academics</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Admissions &amp; Aid</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Student Life</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">About</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Info For</a>
+</nav>
+</div>
+<div style="height: 5px; background: #00AEEF"></div>
+</header>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px 0; font-size: 14px; color: #525D69">
+<a href="#" style="text-decoration: none">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href="#" style="text-decoration: none">Economics</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href="index.html" style="text-decoration: none">Student Success &amp; Graduate Pathways</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span>All Opportunities</span>
+</div>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 24px">
+<a href="index.html" style="display: inline-block; margin-bottom: 14px; font-size: 15px; font-weight: 700; text-decoration: none">← Back to Student Success &amp; Graduate Pathways</a>
+<h1 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 48px; line-height: 1.1">Internships, Research Assistantships &amp; Programs</h1>
+<p style="margin: 0 0 8px; font-size: 19px; color: #3D4752; max-width: 860px">Congressional internships, Federal Reserve research roles, pre-doctoral research assistant positions, and AEA pipeline programs for economics students, all in one list.</p>
+<p style="margin: 0; font-size: 14px; color: #525D69">Last updated November 10, 2026 · Sources: the #econ_ra feed on Bluesky, congressional office websites, the American Economic Association, PREDOC.org and Federal Reserve career pages. Always confirm dates on the official posting.</p>
+</section>
+
+<div style="background: #F2F4F7; border-top: 1px solid #DCE1E7; border-bottom: 1px solid #DCE1E7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
+<div role="group" aria-label="Filter by category" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{ cats }}" as="c" hint-placeholder-count="6">
+<sc-if value="{{ c.active }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ c.pick }}" aria-pressed="true" style="font: inherit; font-size: 15px; font-weight: 700; min-height: 44px; padding: 0 18px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px; cursor: pointer">{{ c.label }} ({{ c.count }})</button>
+</sc-if>
+<sc-if value="{{ c.inactive }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ c.pick }}" aria-pressed="false" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 18px; background: #FFFFFF; color: #1D242C; border: 1px solid #9FAAB6; border-radius: 999px; cursor: pointer">{{ c.label }} ({{ c.count }})</button>
+</sc-if>
+</sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: flex-end">
+<label for="opp-search" style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700">Search
+<input id="opp-search" type="search" value="{{ q }}" onChange="{{ onSearch }}" placeholder="Organization, field, city…" style="font: inherit; font-weight: 400; min-height: 44px; padding: 8px 12px; border: 1px solid #9FAAB6; background: #FFFFFF"></label>
+<label for="opp-level" style="flex: 0 1 240px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700">Who can apply
+<select id="opp-level" value="{{ level }}" onChange="{{ onLevel }}" style="font: inherit; font-weight: 400; min-height: 44px; padding: 8px 12px; border: 1px solid #9FAAB6; background: #FFFFFF">
+<option value="all">Everyone</option>
+<option value="Undergraduate">Current undergraduates</option>
+<option value="Recent graduate">Recent graduates</option>
+<option value="Graduate">Graduate students</option>
+</select></label>
+<label for="opp-closed" style="display: flex; gap: 10px; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600">
+<input id="opp-closed" type="checkbox" checked="{{ hideClosed }}" onChange="{{ onClosed }}" style="width: 20px; height: 20px">Hide closed postings</label>
+</div>
+</div>
+</div>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px">
+<p style="margin: 0 0 18px; font-size: 15px; font-weight: 700; color: #3D4752" aria-live="polite">{{ resultLabel }}</p>
+<sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+<div style="padding: 32px; background: #F2F4F7; text-align: center">
+<p style="margin: 0 0 12px; font-size: 18px; font-weight: 700">No postings match those filters.</p>
+<button type="button" onClick="{{ reset }}" style="font: inherit; font-weight: 700; min-height: 44px; padding: 0 20px; background: #232C64; color: #FFFFFF; border: 0; cursor: pointer">Clear filters</button>
+</div>
+</sc-if>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px">
+<sc-for list="{{ items }}" as="it" hint-placeholder-count="6">
+<article style="border: 1px solid #DCE1E7; border-top: 5px solid #232C64; padding: 22px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<sc-if value="{{ it.isOpen }}" hint-placeholder-val="{{ true }}"><span style="font-size: 13px; font-weight: 700; padding: 3px 10px; background: #E3F1E6; color: #1F5130">Open</span></sc-if>
+<sc-if value="{{ it.isRolling }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; font-weight: 700; padding: 3px 10px; background: #E2ECF7; color: #1D4470">Rolling</span></sc-if>
+<sc-if value="{{ it.isUpcoming }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">Check dates</span></sc-if>
+<sc-if value="{{ it.isClosed }}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; font-weight: 700; padding: 3px 10px; background: #E8EBEF; color: #3D4752">Closed · next cycle</span></sc-if>
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; color: #525D69; text-transform: uppercase">{{ it.cat }}</span>
+</div>
+<h2 style="margin: 0; font-size: 20px; line-height: 1.25">{{ it.title }}</h2>
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #232C64">{{ it.org }}</p>
+<dl style="margin: 0; display: grid; grid-template-columns: 96px 1fr; gap: 4px 12px; font-size: 15px">
+<dt style="font-weight: 700; color: #525D69">Deadline</dt><dd style="margin: 0">{{ it.deadline }}</dd>
+<dt style="font-weight: 700; color: #525D69">Who</dt><dd style="margin: 0">{{ it.who }}</dd>
+<dt style="font-weight: 700; color: #525D69">Where</dt><dd style="margin: 0">{{ it.where }}</dd>
+<dt style="font-weight: 700; color: #525D69">Pay</dt><dd style="margin: 0">{{ it.pay }}</dd>
+</dl>
+<div style="margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px">
+<a href="{{ it.url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; background: #232C64; color: #FFFFFF; font-weight: 700; text-decoration: none">View posting ↗</a>
+<span style="font-size: 13px; color: #525D69">Found via {{ it.source }}</span>
+</div>
+</article>
+</sc-for>
+</div>
+
+<div style="margin-top: 40px; padding: 24px; background: #F2F4F7; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<div style="flex: 1 1 520px">
+<strong style="display: block; font-size: 18px">Know of an opportunity we're missing?</strong>
+<span style="font-size: 15px; color: #3D4752">Faculty, alumni and employers can send postings to Rita Taveras, Academic Program Manager (646.557.4835).</span>
+</div>
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #232C64; font-weight: 700; text-decoration: none">Back to Student Success</a>
+</div>
+</section>
+
+<footer style="background: #1D242C; color: #DCE1E7; font-size: 15px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px">
+<div>
+<p style="margin: 0 0 8px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF">John Jay College</p>
+<p style="margin: 0">524 West 59th Street<br>New York, NY 10019</p>
+</div>
+<div>
+<p style="margin: 0 0 8px; font-weight: 700; color: #FFFFFF">Department of Economics</p>
+<p style="margin: 0">Department of Economics<br>Haaren Hall, Room 336<br>524 West 59th Street, New York, NY 10019<br>646.557.4835 · economics@jjay.cuny.edu</p>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 32px; border-top: 1px solid #3D4752; font-size: 14px; color: #CBD3DC">Design prototype for the John Jay College Department of Economics</div>
+</footer>
+</div>
+</template>
+<script>
+const OPPS = [
+{title:"Congressional Internship Program (Summer 2027)",org:"Congressional Hispanic Caucus Institute (CHCI)",cat:"Congress & Government",levels:["Undergraduate"],status:"open",deadline:"Dec 1, 2026 (Fall 2027: Mar 1, 2027)",who:"Undergraduates and eligible recent graduates",where:"Washington, DC · May 19 – Jul 30, 2027",pay:"$4,776 stipend, housing and travel",url:"https://chci.org",source:"Congress"},
+{title:"Senator Schumer Internships",org:"Office of U.S. Senator Charles E. Schumer",cat:"Congress & Government",levels:["Undergraduate","Recent graduate"],status:"open",deadline:"Spring: Nov 15 · Summer: Mar 15 · Fall: Jul 15",who:"Best suited to undergraduates",where:"Washington, DC (legislative, press, technical) and NYC + state offices",pay:"Paid for interns who certify financial need",url:"https://www.schumer.senate.gov/services/students/internships",source:"Congress"},
+{title:"Senator Gillibrand Internships",org:"Office of U.S. Senator Kirsten Gillibrand",cat:"Congress & Government",levels:["Undergraduate","Recent graduate"],status:"rolling",deadline:"About six weeks before each session; press is rolling",who:"Current students and recent graduates",where:"Washington, DC; New York City and regional offices",pay:"See office FAQ",url:"https://www.gillibrand.senate.gov/help/internships",source:"Congress"},
+{title:"Congressional Internship Program (Summer 2027)",org:"Congressional Black Caucus Foundation (CBCF)",cat:"Congress & Government",levels:["Undergraduate","Recent graduate"],status:"open",deadline:"See application portal",who:"Rising sophomores, juniors, seniors and recent graduates",where:"Washington, DC · May 24 – Jul 23, 2027",pay:"$3,000 stipend plus housing",url:"https://cbcfinc.academicworks.com/opportunities/410",source:"Congress"},
+{title:"Internship with your U.S. Representative",org:"U.S. House of Representatives",cat:"Congress & Government",levels:["Undergraduate"],status:"upcoming",deadline:"Set by each office",who:"College students",where:"Washington, DC or the district office",pay:"Varies by office",url:"https://www.house.gov/representatives/find-your-representative",source:"Congress"},
+{title:"Edward T. Rogowsky Internship Program in Government & Public Affairs",org:"City University of New York",cat:"Congress & Government",levels:["Undergraduate"],status:"upcoming",deadline:"Apply through your college's faculty liaison",who:"CUNY undergraduates",where:"New York City, Albany and the CUNY Washington, DC summer program",pay:"Stipend; DC program covers housing",url:"https://www.york.cuny.edu/news/edward-t-rogowsky-internship-program-in-government-and-public-affairs",source:"CUNY"},
+{title:"Undergraduate Session Assistants Program",org:"New York State Senate",cat:"Congress & Government",levels:["Undergraduate"],status:"closed",deadline:"Spring 2027 closed in late October · next cycle fall 2027",who:"Juniors and seniors at New York colleges",where:"Albany, NY · January – April",pay:"$8,800 stipend",url:"https://www.nysenate.gov/newsroom/articles/2024/undergraduate-program",source:"NYS Legislature"},
+{title:"Session Internship",org:"New York State Assembly",cat:"Congress & Government",levels:["Undergraduate"],status:"closed",deadline:"Closed Nov 1, 2026 · next cycle fall 2027",who:"College students (through your school's liaison)",where:"Albany, NY · Jan 11 – May 5, 2027",pay:"$8,800 stipend",url:"https://www.assembly.ny.gov/internship/",source:"NYS Legislature"},
+{title:"Budget Policy Internships",org:"Committee for a Responsible Federal Budget",cat:"Congress & Government",levels:["Undergraduate","Graduate","Recent graduate"],status:"rolling",deadline:"Applications accepted year-round",who:"Undergraduate and graduate students",where:"Washington, DC",pay:"See posting",url:"https://www.crfb.org/jobs/internship",source:"Policy"},
+{title:"Economics Student Trainee (Semester of Service)",org:"USDA Economic Research Service",cat:"Congress & Government",levels:["Undergraduate","Graduate"],status:"closed",deadline:"Closed Nov 5, 2026",who:"Students enrolled at least half-time",where:"Remote · 8–20 hrs/week",pay:"Unpaid (volunteer)",url:"https://www.usajobs.gov/job/889896000",source:"#econ_ra"},
+{title:"Summer 2027 Academic Research Internship",org:"Federal Reserve Bank of Richmond",cat:"Federal Reserve",levels:["Undergraduate","Graduate"],status:"open",deadline:"Not listed (apply early)",who:"Students in economics, math, statistics or related fields",where:"Richmond, VA (on site)",pay:"$23.50/hour",url:"https://rb.wd5.myworkdayjobs.com/FRS/job/Richmond-VA/Summer-2027-Academic-Research-Internship_R-0000033215-1",source:"#econ_ra"},
+{title:"Research Assistant Program (2 years)",org:"Federal Reserve Bank of Chicago",cat:"Federal Reserve",levels:["Recent graduate"],status:"open",deadline:"Accepting applications now",who:"Recent BA grads; U.S. citizens or permanent residents",where:"Chicago, IL",pay:"Salaried",url:"https://www.chicagofed.org/research/research-assistant",source:"#econ_ra"},
+{title:"Research Analyst",org:"Federal Reserve Bank of Cleveland",cat:"Federal Reserve",levels:["Recent graduate"],status:"open",deadline:"Hiring typically begins Sept–Oct",who:"BA in economics or related field",where:"Cleveland, OH · usually 2–3 years",pay:"Salaried",url:"https://rb.wd5.myworkdayjobs.com/en-US/FRS/job/Cleveland-OH/Research-Analyst_R-0000033336",source:"#econ_ra"},
+{title:"Research Assistant",org:"Federal Reserve Board of Governors",cat:"Federal Reserve",levels:["Recent graduate"],status:"rolling",deadline:"Reviewed in rounds; see careers page",who:"BA or MA holders; U.S. citizenship required",where:"Washington, DC · 2 years",pay:"Salaried",url:"https://www.federalreserve.gov/careers-research-assistants.htm",source:"Fed"},
+{title:"Junior Summer Analyst — Research",org:"Federal Reserve Bank of New York",cat:"Federal Reserve",levels:["Undergraduate"],status:"closed",deadline:"Summer 2027 closed Oct 5, 2026 · next window Sept 2027",who:"Juniors",where:"New York, NY · 10 weeks",pay:"Paid",url:"https://www.newyorkfed.org/research/careers/research_analysts/index.html",source:"Fed"},
+{title:"Research Analyst Program (2 years)",org:"Federal Reserve Bank of New York",cat:"Federal Reserve",levels:["Recent graduate"],status:"closed",deadline:"2027 window closed Sept 14 · next window late summer 2027",who:"College graduates with strong economics, math and statistics",where:"New York, NY",pay:"Salaried",url:"https://www.newyorkfed.org/research/careers/research_analysts/index.html",source:"Fed"},
+{title:"Research Associate",org:"Federal Reserve Bank of St. Louis",cat:"Federal Reserve",levels:["Recent graduate"],status:"closed",deadline:"Closed Oct 30, 2026",who:"BA in economics with research experience",where:"St. Louis, MO · starts spring/summer 2027",pay:"Salaried",url:"https://econjobmarket.org/positions/12583",source:"EconJobMarket"},
+{title:"All Federal Reserve RA openings",org:"Federal Reserve System (fedeconjobs.org)",cat:"Federal Reserve",levels:["Recent graduate"],status:"rolling",deadline:"Each Reserve Bank recruits separately",who:"Recent graduates",where:"12 Reserve Banks and the Board",pay:"Salaried",url:"https://www.fedeconjobs.org",source:"Fed"},
+{title:"Senior Research Assistant, The Hamilton Project",org:"Brookings Institution",cat:"Predoc & RA",levels:["Recent graduate"],status:"upcoming",deadline:"Check whether the posting is still open",who:"Recent graduates",where:"Washington, DC (hybrid)",pay:"Salaried",url:"https://careers-brookings.icims.com/jobs/3892/senior-research-assistant%2c-the-hamilton-project-%28job-id%3a-2026-3892%29/job",source:"#econ_ra"},
+{title:"Pre-doc: Applied Micro, Health & Public Economics",org:"Georgetown University (Yunan Ji)",cat:"Predoc & RA",levels:["Recent graduate"],status:"rolling",deadline:"Rolling until filled",who:"Recent graduates",where:"Washington, DC",pay:"Salaried",url:"https://www.predoc.org/opportunities",source:"PREDOC.org"},
+{title:"Pre-doc: Environmental Economics & Public Finance",org:"UC Berkeley (Joseph Shapiro & Reed Walker)",cat:"Predoc & RA",levels:["Recent graduate"],status:"rolling",deadline:"Initial review Oct 29, 2026; final deadline Oct 2027",who:"Recent graduates",where:"Berkeley, CA",pay:"Salaried",url:"https://www.predoc.org/opportunities",source:"PREDOC.org"},
+{title:"PREDOC.org pre-doctoral job board",org:"PREDOC.org consortium",cat:"Predoc & RA",levels:["Recent graduate"],status:"rolling",deadline:"New listings weekly",who:"Graduating seniors and recent graduates",where:"Universities and research institutes nationwide",pay:"Salaried",url:"https://www.predoc.org/opportunities",source:"PREDOC.org"},
+{title:"EconTrack job board",org:"American Economic Association",cat:"Predoc & RA",levels:["Recent graduate","Graduate"],status:"rolling",deadline:"Ongoing",who:"Students and early-career economists",where:"Various",pay:"Varies",url:"https://www.aeaweb.org/econtrack",source:"AEA"},
+{title:"AEA Summer Training Program 2027",org:"American Economic Association · hosted at American University",cat:"AEA & Pipeline",levels:["Undergraduate"],status:"open",deadline:"Late January (2026 deadline was Jan 31)",who:"Students with 2+ years of college and strong Ph.D. interest",where:"Washington, DC · May 31 – Jul 23, 2027",pay:"$3,250 stipend, travel, room and board",url:"https://www.aeaweb.org/committees/AEASP/apply/2027",source:"AEA"},
+{title:"AEA Mentoring Program",org:"American Economic Association (CSMGEP)",cat:"AEA & Pipeline",levels:["Undergraduate","Graduate"],status:"upcoming",deadline:"2026 cycle ran Jan 6 – Feb 5",who:"Students from undergraduate through Ph.D.",where:"National; includes a summer pipeline conference",pay:"Program support",url:"https://www.aeaweb.org/about-aea/committees/csmgep/mentoring",source:"AEA"},
+{title:"Expanding Discovery in Economics+ (EDE+)",org:"University of Chicago Booth School of Business",cat:"AEA & Pipeline",levels:["Undergraduate"],status:"upcoming",deadline:"2027 cycle TBA (2026 closed Feb 16)",who:"First- and second-year undergraduates, GPA 3.3+",where:"Chicago and Washington, DC",pay:"Program support",url:"https://www.chicagobooth.edu/expanding-discovery-in-economics",source:"PREDOC.org"},
+{title:"2027 Summer Economics Intern",org:"General Motors",cat:"Private sector",levels:["Graduate"],status:"open",deadline:"Not listed",who:"Master's and Ph.D. students in economics",where:"Warren, MI or Washington, DC (hybrid) · 12 weeks",pay:"Paid; relocation stipend",url:"https://search-careers.gm.com/en/jobs/jr-202619691/2027-summer-intern-general-motors-economics-intern/",source:"#econ_ra"},
+{title:"Research Intern — AI & Human Systems",org:"Microsoft Research",cat:"Private sector",levels:["Graduate"],status:"rolling",deadline:"Rolling until filled",who:"Ph.D. candidates (computational social science, economics)",where:"New York City and Northeast labs",pay:"Paid",url:"https://apply.careers.microsoft.com/careers/job/1970393557056017",source:"#econ_ra"}
+];
+const CATS = ["All","Congress & Government","Federal Reserve","Predoc & RA","AEA & Pipeline","Private sector"];
+const ORDER = {open:0, rolling:1, upcoming:2, closed:3};
+class Component extends DCLogic {
+  constructor(props){ super(props); this.state = { cat: "All", level: "all", hideClosed: false, q: "" }; }
+  renderVals() {
+    const s = this.state;
+    const q = (s.q || "").toLowerCase().trim();
+    const base = OPPS.filter(o => (s.level === "all" || o.levels.indexOf(s.level) > -1) && (!s.hideClosed || o.status !== "closed") && (!q || (o.title + " " + o.org + " " + o.where + " " + o.who + " " + o.cat).toLowerCase().indexOf(q) > -1));
+    const list = base.filter(o => s.cat === "All" || o.cat === s.cat).slice().sort((a,b) => ORDER[a.status] - ORDER[b.status]);
+    const items = list.map(o => Object.assign({}, o, { isOpen: o.status === "open", isRolling: o.status === "rolling", isUpcoming: o.status === "upcoming", isClosed: o.status === "closed" }));
+    const cats = CATS.map(c => ({ label: c, count: c === "All" ? base.length : base.filter(o => o.cat === c).length, active: s.cat === c, inactive: s.cat !== c, pick: () => this.setState({ cat: c }) }));
+    const n = items.length;
+    return {
+      items, cats, q: s.q, level: s.level, hideClosed: s.hideClosed,
+      empty: n === 0,
+      resultLabel: "Showing " + n + " of " + OPPS.length + " opportunities",
+      onSearch: (e) => this.setState({ q: e.target.value }),
+      onLevel: (e) => this.setState({ level: e.target.value }),
+      onClosed: (e) => this.setState({ hideClosed: e.target.checked }),
+      reset: () => this.setState({ cat: "All", level: "all", hideClosed: false, q: "" })
+    };
+  }
+}
+DCLite.mount(Component);
+</script>
+</body>
+</html>

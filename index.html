@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>John Jay Economics: Student Success and Graduate Pathways</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;800;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#232C64}a:hover{color:#161C40}
+*{box-sizing:border-box}
+</style>
+<script src="gate.js"></script>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="background: #1D242C; color: #7FD6F7; font-family: Arial, sans-serif; font-size: 14px; text-align: center; padding: 8px 16px">Design prototype: a proposed Student Success page for the John Jay College Department of Economics. Not an official jjay.cuny.edu page.</div>
+<div style="font-family: 'Open Sans', Arial, sans-serif; color: #1D242C; font-size: 17px; line-height: 1.55; background: #FFFFFF">
+
+<!-- Utility bar -->
+<div style="background: #161C40; color: #FFFFFF; font-size: 14px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Request Information</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Visit</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Apply</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Register</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Give</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Contact</a>
+</div>
+</div>
+
+<!-- Main header -->
+<header style="background: #232C64; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<a href="#" style="color: #FFFFFF; text-decoration: none; display: flex; flex-direction: column; line-height: 1.1">
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 0.2px">John Jay College</span>
+<span style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #7FD6F7">The City University of New York</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 16px; font-weight: 600">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Academics</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Admissions &amp; Aid</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Student Life</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">About</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Info For</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Research</a>
+</nav>
+</div>
+<div style="height: 5px; background: #00AEEF"></div>
+</header>
+
+<!-- Breadcrumb -->
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px 0; font-size: 14px; color: #525D69">
+<a href="#" style="text-decoration: none">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href="#" style="text-decoration: none">Economics</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span>Student Success &amp; Graduate Pathways</span>
+</div>
+
+<!-- Hero -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 48px">
+<p style="margin: 0 0 8px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #232C64">Department of Economics · John Jay College of Criminal Justice</p>
+<h1 style="margin: 0 0 16px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 52px; line-height: 1.1; color: #1D242C; max-width: 900px">Student Success &amp; Graduate Pathways</h1>
+<p style="margin: 0 0 36px; font-size: 20px; color: #3D4752; max-width: 780px">Everything an economics major needs in one place: internships, faculty research, presenting and publishing, funding, and preparing for a master's or Ph.D. program.</p>
+
+<!-- Pathway -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<a href="#research" style="text-decoration: none; color: #1D242C; background: #F2F4F7; border-top: 5px solid #232C64; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; color: #232C64; letter-spacing: 1px">STEP 1</span>
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700">Coursework</span>
+<span style="font-size: 15px; color: #3D4752">Build the math, statistics and econometrics foundation.</span>
+</a>
+<a href="#research" style="text-decoration: none; color: #1D242C; background: #F2F4F7; border-top: 5px solid #232C64; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; color: #232C64; letter-spacing: 1px">STEP 2</span>
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700">Faculty Research</span>
+<span style="font-size: 15px; color: #3D4752">Join a project as a research assistant and find a mentor.</span>
+</a>
+<a href="#publish" style="text-decoration: none; color: #1D242C; background: #F2F4F7; border-top: 5px solid #232C64; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; color: #232C64; letter-spacing: 1px">STEP 3</span>
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700">Present &amp; Publish</span>
+<span style="font-size: 15px; color: #3D4752">Share your work at seminars, conferences and journals.</span>
+</a>
+<a href="#gradschool" style="text-decoration: none; color: #1D242C; background: #00AEEF; border-top: 5px solid #161C40; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; color: #161C40; letter-spacing: 1px">STEP 4</span>
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700">Graduate School or Career</span>
+<span style="font-size: 15px; color: #1D242C">Apply to master's and Ph.D. programs, or launch your career.</span>
+</a>
+</div>
+</section>
+
+<!-- Jump nav -->
+<nav aria-label="On this page" style="background: #F2F4F7; border-top: 1px solid #DCE1E7; border-bottom: 1px solid #DCE1E7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<span style="font-size: 14px; font-weight: 700; color: #525D69; margin-right: 6px">On this page:</span>
+<a href="#internships" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Internships &amp; Careers</a>
+<a href="#gradschool" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Graduate School Prep</a>
+<a href="#research" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Faculty Research</a>
+<a href="#seminars" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Seminars &amp; Events</a>
+<a href="#publish" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Publish &amp; Present</a>
+<a href="#funding" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Funding &amp; Fellowships</a>
+<a href="#mentorship" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Mentorship</a>
+<a href="opportunities.html" style="text-decoration: none; font-size: 15px; font-weight: 700; padding: 10px 16px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px">All Opportunities →</a>
+</div>
+</nav>
+
+<!-- 1. Internships -->
+<section id="internships" style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">01 · INTERNSHIPS &amp; CAREERS</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Get real-world experience</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #3D4752">Internships with employers, research institutions, government agencies and economic policy organizations, plus the tools to apply for them.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 999 1 560px; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 14px">
+<h3 style="margin: 0; font-size: 20px">Open now: deadlines coming up</h3>
+<span style="font-size: 14px; color: #525D69">Updated November 10, 2026</span>
+</div>
+<div style="display: flex; flex-direction: column; border: 1px solid #DCE1E7">
+<sc-for list="{{ featured }}" as="f" hint-placeholder-count="6">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 16px 18px; border-bottom: 1px solid #DCE1E7">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">{{ f.cat }}</span>
+<a href="{{ f.url }}" target="_blank" rel="noopener" style="font-size: 17px; font-weight: 700; text-decoration: none">{{ f.title }} ↗</a>
+<span style="font-size: 15px; color: #3D4752">{{ f.org }} · {{ f.pay }}</span>
+</div>
+<div style="flex: 0 1 220px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">Deadline</span>
+<span style="font-size: 15px; font-weight: 600">{{ f.deadline }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="margin-top: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<a href="opportunities.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #232C64; color: #FFFFFF; font-weight: 700; text-decoration: none">See all 28 opportunities →</a>
+<span style="font-size: 14px; color: #525D69">Congress, the Fed, pre-docs, AEA programs and more, with filters.</span>
+</div>
+<p style="margin: 12px 0 0; font-size: 14px; color: #525D69">Employers: to post an opportunity for economics students, contact Rita Taveras, Academic Program Manager (646.557.4835).</p>
+</div>
+
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px">
+<div style="background: #F2F4F7; padding: 22px">
+<h3 style="margin: 0 0 6px; font-size: 18px">Application resources</h3>
+<p style="margin: 0 0 12px; font-size: 15px; color: #3D4752">Resume and cover-letter templates for economics roles, interview prep, and where to search.</p>
+<a href="#" style="font-weight: 700; font-size: 15px">Get application resources →</a>
+</div>
+<div style="background: #F2F4F7; padding: 22px">
+<h3 style="margin: 0 0 6px; font-size: 18px">Career guidance</h3>
+<p style="margin: 0 0 12px; font-size: 15px; color: #3D4752">Book an appointment with the Magner Career Center or explore what you can do with an economics degree.</p>
+<a href="#" style="font-weight: 700; font-size: 15px">Explore career paths →</a>
+</div>
+<div style="background: #F2F4F7; padding: 22px">
+<h3 style="margin: 0 0 6px; font-size: 18px">Partner organizations</h3>
+<p style="margin: 0 0 12px; font-size: 15px; color: #3D4752">[Employers, research institutions, agencies and policy organizations the department partners with.]</p>
+<a href="#" style="font-weight: 700; font-size: 15px">See our partners →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 2. Graduate school -->
+<section id="gradschool" style="background: #F2F4F7; margin-top: 56px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">02 · GRADUATE SCHOOL PREPARATION</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Prepare for a master's or Ph.D.</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #3D4752">Graduate programs in economics weigh your quantitative preparation and research experience heavily. Start planning early, ideally by sophomore or junior year.</p>
+
+<div role="tablist" aria-label="Graduate degree" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 0">
+<sc-if value="{{ showMS }}" hint-placeholder-val="{{ true }}">
+<button type="button" role="tab" aria-selected="true" onClick="{{ pickMS }}" style="font: inherit; font-size: 17px; font-weight: 700; min-height: 52px; padding: 0 22px; background: #FFFFFF; color: #232C64; border: 0; border-top: 5px solid #00AEEF; cursor: pointer">Master's · John Jay</button>
+<button type="button" role="tab" aria-selected="false" onClick="{{ pickPhD }}" style="font: inherit; font-size: 17px; font-weight: 600; min-height: 52px; padding: 0 22px; background: #E8EBEF; color: #3D4752; border: 0; border-top: 5px solid transparent; cursor: pointer">Ph.D. · CUNY Graduate Center</button>
+</sc-if>
+<sc-if value="{{ showPhD }}" hint-placeholder-val="{{ false }}">
+<button type="button" role="tab" aria-selected="false" onClick="{{ pickMS }}" style="font: inherit; font-size: 17px; font-weight: 600; min-height: 52px; padding: 0 22px; background: #E8EBEF; color: #3D4752; border: 0; border-top: 5px solid transparent; cursor: pointer">Master's · John Jay</button>
+<button type="button" role="tab" aria-selected="true" onClick="{{ pickPhD }}" style="font: inherit; font-size: 17px; font-weight: 700; min-height: 52px; padding: 0 22px; background: #FFFFFF; color: #232C64; border: 0; border-top: 5px solid #232C64; cursor: pointer">Ph.D. · CUNY Graduate Center</button>
+</sc-if>
+</div>
+
+<sc-if value="{{ showMS }}" hint-placeholder-val="{{ true }}">
+<div role="tabpanel" style="background: #FFFFFF; padding: 32px; margin-bottom: 40px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: flex-start">
+<div style="flex: 1 1 560px">
+<h3 style="margin: 0 0 6px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; line-height: 1.15">M.A. in Economics, John Jay College</h3>
+<p style="margin: 0; font-size: 16px; color: #3D4752">A 36-credit graduate program in applied, pluralist economics. Students study political economy, the economics of gender, environmental sustainability, economic development, and global inequality of income and wealth, while building writing and data analysis skills.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; flex: 0 1 380px">
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">36</span><span style="font-size: 13px; font-weight: 700">credits</span></div>
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">6</span><span style="font-size: 13px; font-weight: 700">core courses</span></div>
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">6</span><span style="font-size: 13px; font-weight: 700">electives</span></div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 28px">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 19px">Step 1 · Get admitted</h4>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+<li>A bachelor's degree; see John Jay graduate admissions for prerequisites, materials and deadlines</li>
+<li>Talk with the graduate program director about your preparation in economics, math and statistics</li>
+</ul>
+<div style="border: 1px solid #DCE1E7; padding: 14px; font-size: 14px"><strong style="display: block; font-size: 15px">Already a John Jay economics major?</strong>The dual admission / accelerated BS/MA lets qualifying undergraduates earn both degrees with 134 total credits. Students must keep a 3.5 GPA each semester.</div>
+</div>
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 19px">Step 2 · Complete the core (18 credits)</h4>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 713</strong>Political Economy</li>
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 720</strong>Macroeconomics</li>
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 725</strong>Microeconomics</li>
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 750</strong>Mathematics for Economists</li>
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 751</strong>Research Methods I: Quantitative Analysis</li>
+<li style="display: flex; gap: 12px; padding: 10px 12px; background: #F2F4F7"><strong style="flex: none; width: 82px; color: #232C64">ECO 799</strong>Seminar in Economics</li>
+</ol>
+</div>
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 19px">Step 3 · Choose six electives (18 credits)</h4>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px">
+<li style="padding: 6px 10px; border: 1px solid #CBD3DC">CRJ 741 Economic Analysis of Crime</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 711 Economic History</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 731 Economic Development</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 740 Community Economic Development</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 744 International Finance &amp; Trade</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 745 International Political Economy</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 746 Alternative Economic Systems</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 752 Research Methods II</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 760 Political Economy of the Environment</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 780 Selected Topics</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 794 Independent Study</li><li style="padding: 6px 10px; border: 1px solid #CBD3DC">ECO 798 Faculty-Mentored Research</li>
+</ul>
+<p style="margin: 0; font-size: 14px; color: #3D4752">Planning a Ph.D.? Pair ECO 752 with ECO 798 Faculty-Mentored Research to produce a research paper you can use as a writing sample.</p>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding: 18px 20px; background: #E6E8F3">
+<div style="font-size: 15px"><strong>Program contact:</strong> Prof. Ian J. Seda-Irizarry, Graduate Program Director · Haaren Hall 336-17 · 212.393.6425 · iseda@jjay.cuny.edu</div>
+<a href="https://www.jjay.cuny.edu/academics/graduate-programs/ma-economics/economics-master-arts" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; background: #232C64; color: #FFFFFF; font-weight: 700; text-decoration: none">Program page ↗</a>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ showPhD }}" hint-placeholder-val="{{ false }}">
+<div role="tabpanel" style="background: #FFFFFF; padding: 32px; margin-bottom: 40px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: flex-start">
+<div style="flex: 1 1 560px">
+<h3 style="margin: 0 0 6px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; line-height: 1.15">Ph.D. in Economics, CUNY Graduate Center</h3>
+<p style="margin: 0; font-size: 16px; color: #3D4752">CUNY's doctoral program in economics is based at the Graduate Center (365 Fifth Avenue, Manhattan). Faculty from across CUNY teach and advise in it. It's a full-time research degree that trains economists for academia, government and policy research.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; flex: 0 1 380px">
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">60+</span><span style="font-size: 13px; font-weight: 700">credits</span></div>
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">2</span><span style="font-size: 13px; font-weight: 700">exams</span></div>
+<div style="background: #F2F4F7; padding: 14px; text-align: center"><span style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #232C64">8</span><span style="font-size: 13px; font-weight: 700">year limit</span></div>
+</div>
+</div>
+
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px">
+<li style="background: #F2F4F7; padding: 18px; border-top: 4px solid #232C64; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 13px; letter-spacing: 1px; color: #232C64">LEVEL I · YEARS 1–2</strong><strong style="font-size: 17px">Coursework &amp; First Exam</strong><span style="font-size: 14px; color: #3D4752">Core theory and econometrics courses, then the First Examination. You must pass it to continue past 45 credits, and the program expects it passed by June of year two.</span></li>
+<li style="background: #F2F4F7; padding: 18px; border-top: 4px solid #232C64; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 13px; letter-spacing: 1px; color: #232C64">LEVEL II · YEARS 2–3</strong><strong style="font-size: 17px">Fields &amp; Second Exam</strong><span style="font-size: 14px; color: #3D4752">Complete field courses, then pass the Second Examination (a field exam, usually in August) within 10 registered semesters.</span></li>
+<li style="background: #F2F4F7; padding: 18px; border-top: 4px solid #232C64; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 13px; letter-spacing: 1px; color: #232C64">LEVEL III · CANDIDACY</strong><strong style="font-size: 17px">Advance to candidacy</strong><span style="font-size: 14px; color: #3D4752">All coursework done (at least 30 credits at CUNY) with a B average, plus both exams.</span></li>
+<li style="background: #F2F4F7; padding: 18px; border-top: 4px solid #00AEEF; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 13px; letter-spacing: 1px; color: #10325A">DISSERTATION</strong><strong style="font-size: 17px">Research &amp; defense</strong><span style="font-size: 14px; color: #3D4752">Original research, a committee of at least three CUNY doctoral faculty, and an oral defense. Everything must be finished within eight years of matriculating.</span></li>
+</ol>
+
+<div style="display: flex; flex-wrap: wrap; gap: 28px">
+<div style="flex: 1 1 320px">
+<h4 style="margin: 0 0 10px; font-size: 19px">Fields of specialization</h4>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+<li>Public Economics (urban economics, public finance)</li>
+<li>International Economics (trade, international macro &amp; finance, development)</li>
+<li>Economics of Human Resources (labor, health)</li>
+<li>Financial Economics (corporate finance, investments)</li>
+<li>Macro &amp; Monetary Economics</li>
+<li>Industrial Organization</li>
+</ul>
+<p style="margin: 10px 0 0; font-size: 14px; color: #3D4752">Other fields can be approved by the Executive Officer.</p>
+</div>
+<div style="flex: 1 1 320px">
+<h4 style="margin: 0 0 10px; font-size: 19px">Funding</h4>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+<li><strong>Graduate Center Fellowship:</strong> $29,374 a year (fall and spring), a tuition award, and low-cost NYSHIP health insurance</li>
+<li><strong>Provost's Enhancement Fellowship:</strong> an extra $10,000 a year for entering students from underrepresented groups who are U.S. citizens or permanent residents</li>
+<li><strong>Five-Year Tuition Fellowship</strong> for some admitted students</li>
+</ul>
+</div>
+<div style="flex: 1 1 320px">
+<h4 style="margin: 0 0 10px; font-size: 19px">Along the way</h4>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+<li><strong>En-route M.A.:</strong> after 40 credits with a B average plus a capstone project</li>
+<li><strong>Residency:</strong> at least one full-time year (7+ credits in each of two consecutive semesters)</li>
+<li><strong>Seminars:</strong> students regularly attend the Applied Economics Seminar and other NYC economics seminars</li>
+</ul>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding: 18px 20px; background: #E6E8F3">
+<div style="font-size: 15px"><strong>Contact:</strong> Ph.D. Program in Economics, The Graduate Center, 365 Fifth Avenue, New York, NY 10016 · Economics@gc.cuny.edu</div>
+<a href="https://www.gc.cuny.edu/Economics" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; background: #232C64; color: #FFFFFF; font-weight: 700; text-decoration: none">Graduate Center program page ↗</a>
+</div>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 1 1 360px">
+<h3 style="margin: 0 0 14px; font-size: 20px">Recommended preparation</h3>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px">
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Calculus I–III</strong> (multivariable)</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Linear algebra</strong></span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Probability &amp; mathematical statistics</strong></span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Econometrics</strong>, plus programming in R, Stata or Python</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Real analysis</strong> (strongly recommended for Ph.D. applicants)</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="flex: none; width: 10px; height: 10px; margin-top: 8px; background: #232C64"></span><span><strong>Research experience</strong>, ideally as a faculty research assistant</span></li>
+</ul>
+<a href="#" style="display: inline-block; margin-top: 20px; font-weight: 700">Download the graduate school preparation guide →</a>
+</div>
+
+<div style="flex: 1 1 360px">
+<h3 style="margin: 0 0 14px; font-size: 20px">Application workshops</h3>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 16px; align-items: center">
+<span style="flex: none; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #232C64; width: 64px">[MON DD]</span>
+<span><strong style="display: block">Writing a statement of purpose</strong><span style="font-size: 15px; color: #525D69">[Time · Location]</span></span>
+</div>
+<div style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 16px; align-items: center">
+<span style="flex: none; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #232C64; width: 64px">[MON DD]</span>
+<span><strong style="display: block">Securing strong recommendation letters</strong><span style="font-size: 15px; color: #525D69">[Time · Location]</span></span>
+</div>
+<div style="background: #FFFFFF; padding: 16px 18px; display: flex; gap: 16px; align-items: center">
+<span style="flex: none; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #232C64; width: 64px">[MON DD]</span>
+<span><strong style="display: block">Building research experience &amp; contacting faculty</strong><span style="font-size: 15px; color: #525D69">[Time · Location]</span></span>
+</div>
+</div>
+<div style="margin-top: 16px; background: #232C64; color: #FFFFFF; padding: 20px">
+<strong style="display: block; font-size: 17px; margin-bottom: 4px">CUNY Graduate Center connection</strong>
+<span style="font-size: 15px">See doctoral research up close through visits, seminars and conversations with Ph.D. students at the CUNY Graduate Center.</span>
+<a href="#" style="display: block; margin-top: 10px; color: #7FD6F7; font-weight: 700">Learn about Graduate Center opportunities →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 3. Faculty research -->
+<section id="research" style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">03 · FACULTY RESEARCH &amp; RESEARCH ASSISTANTSHIPS</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Work with faculty on active research</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #3D4752">Browse what our faculty study, see which projects are looking for undergraduate research assistants, and tell us what you're interested in.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 999 1 560px; min-width: 0">
+<h3 style="margin: 0 0 14px; font-size: 20px">Faculty research directory</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px">
+<sc-for list="{{ faculty }}" as="p" hint-placeholder-count="6">
+<div style="border: 1px solid #DCE1E7; border-top: 4px solid #232C64; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<strong style="font-size: 18px">{{ p.name }}</strong>
+<span style="font-size: 14px; font-weight: 700; color: #232C64">{{ p.title }}</span>
+<span style="font-size: 15px; color: #3D4752">{{ p.areas }}</span>
+<span style="font-size: 14px; color: #525D69">{{ p.office }}</span>
+<div style="margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 6px 16px">
+<a href="{{ p.mail }}" style="font-size: 15px; font-weight: 600">{{ p.email }}</a>
+<a href="{{ p.url }}" target="_blank" rel="noopener" style="font-size: 15px; font-weight: 600">Profile ↗</a>
+</div>
+</div>
+</sc-for>
+</div>
+<a href="https://www.jjay.cuny.edu/academics/departments/economics/faculty" target="_blank" rel="noopener" style="display: inline-block; margin-top: 18px; font-weight: 700">See the full faculty directory ↗</a>
+<p style="margin: 18px 0 0; font-size: 15px; color: #3D4752">Looking further afield? Researchers across other CUNY campuses and the Graduate Center also take on undergraduate assistants. <a href="#">Browse CUNY-wide opportunities</a>.</p>
+</div>
+
+<form style="flex: 1 1 340px; background: #F2F4F7; padding: 26px; display: flex; flex-direction: column; gap: 14px" aria-labelledby="ra-form-title">
+<h3 id="ra-form-title" style="margin: 0; font-size: 20px">Express interest in a research project</h3>
+<p style="margin: 0; font-size: 15px; color: #3D4752">We'll share your interests with faculty who are recruiting.</p>
+<label for="ra-name" style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 600">Full name<input id="ra-name" type="text" style="font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid #9FAAB6; background: #FFFFFF; min-height: 44px"></label>
+<label for="ra-email" style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 600">College email<input id="ra-email" type="email" style="font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid #9FAAB6; background: #FFFFFF; min-height: 44px"></label>
+<label for="ra-year" style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 600">Class year<select id="ra-year" style="font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid #9FAAB6; background: #FFFFFF; min-height: 44px"><option>Sophomore</option><option>Junior</option><option>Senior</option></select></label>
+<label for="ra-interest" style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 600">Research interests and relevant courses<textarea id="ra-interest" rows="3" style="font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid #9FAAB6; background: #FFFFFF"></textarea></label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px"><input type="checkbox" style="width: 20px; height: 20px">I'm considering graduate school</label>
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ sendForm }}" style="font: inherit; font-weight: 700; min-height: 48px; width: 100%; background: #232C64; color: #FFFFFF; border: 0; cursor: pointer">Submit interest</button>
+</sc-if>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin: 0; padding: 14px; background: #E3F1E6; color: #1F5130; font-weight: 700">Thanks! Your interest has been shared with faculty who are recruiting research assistants.</p>
+</sc-if>
+</form>
+</div>
+</section>
+
+<!-- 4. Seminars -->
+<section id="seminars" style="background: #1D242C; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #7FD6F7">04 · SEMINARS &amp; EVENTS</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Undergraduate Economics Research Seminar</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #DCE1E7">Present work in progress, get feedback from faculty and peers, and attend economics seminars across John Jay, CUNY and the Graduate Center.</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 999 1 560px; min-width: 0">
+<h3 style="margin: 0 0 14px; font-size: 20px">Upcoming events</h3>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 18px 0; border-top: 1px solid #525D69">
+<span style="flex: none; width: 90px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #00AEEF">[MON DD]</span>
+<span style="flex: 1 1 300px"><strong style="display: block; font-size: 17px">Undergraduate Research Seminar: [Student presenter, topic]</strong><span style="font-size: 15px; color: #CBD3DC">John Jay · [Room, time]</span></span>
+<span style="align-self: center; font-size: 13px; font-weight: 700; padding: 4px 10px; border: 1px solid #00AEEF; color: #7FD6F7">John Jay</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 18px 0; border-top: 1px solid #525D69">
+<span style="flex: none; width: 90px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #00AEEF">[MON DD]</span>
+<span style="flex: 1 1 300px"><strong style="display: block; font-size: 17px">[Economics seminar title]</strong><span style="font-size: 15px; color: #CBD3DC">CUNY Graduate Center · [Room, time]</span></span>
+<span style="align-self: center; font-size: 13px; font-weight: 700; padding: 4px 10px; border: 1px solid #CBD3DC; color: #FFFFFF">Graduate Center</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 18px 0; border-top: 1px solid #525D69">
+<span style="flex: none; width: 90px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #00AEEF">[MON DD]</span>
+<span style="flex: 1 1 300px"><strong style="display: block; font-size: 17px">[Poster session or interdisciplinary workshop]</strong><span style="font-size: 15px; color: #CBD3DC">[CUNY campus] · [Room, time]</span></span>
+<span style="align-self: center; font-size: 13px; font-weight: 700; padding: 4px 10px; border: 1px solid #CBD3DC; color: #FFFFFF">CUNY-wide</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 18px 0; border-top: 1px solid #525D69; border-bottom: 1px solid #525D69">
+<span style="flex: none; width: 90px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #00AEEF">[MON DD]</span>
+<span style="flex: 1 1 300px"><strong style="display: block; font-size: 17px">[Research conference]</strong><span style="font-size: 15px; color: #CBD3DC">[Location] · Submission deadline [DATE]</span></span>
+<span style="align-self: center; font-size: 13px; font-weight: 700; padding: 4px 10px; border: 1px solid #CBD3DC; color: #FFFFFF">Conference</span>
+</div>
+</div>
+<a href="#" style="display: inline-block; margin-top: 18px; font-weight: 700; color: #7FD6F7">View the full departmental and CUNY-wide calendar →</a>
+</div>
+<div style="flex: 1 1 320px; background: #232C64; padding: 26px; align-self: flex-start">
+<h3 style="margin: 0 0 8px; font-size: 20px">Present at the seminar</h3>
+<p style="margin: 0 0 18px; font-size: 15px; color: #E6E8F3">Senior projects, honors theses and strong class papers are all welcome. Sessions run [frequency] during the semester.</p>
+<a href="#" style="display: flex; align-items: center; justify-content: center; min-height: 48px; background: #00AEEF; color: #1D242C; font-weight: 700; text-decoration: none">Apply to present</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5. Publish -->
+<section id="publish" style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">05 · PUBLISH &amp; PRESENT</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Turn your paper into a publication</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #3D4752">A strong class assignment or senior project can become a conference paper or journal submission. Here's how, and where to send it.</p>
+
+<h3 style="margin: 0 0 16px; font-size: 20px">From class paper to submission</h3>
+<ol style="margin: 0 0 40px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<li style="border-left: 0; background: #F2F4F7; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 34px; font-weight: 700; color: #232C64; line-height: 1">1</span><strong>Find a faculty mentor</strong><span style="font-size: 15px; color: #3D4752">Ask your instructor whether the paper has a publishable question.</span></li>
+<li style="background: #F2F4F7; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 34px; font-weight: 700; color: #232C64; line-height: 1">2</span><strong>Strengthen the analysis</strong><span style="font-size: 15px; color: #3D4752">Add a literature review, better data and robustness checks.</span></li>
+<li style="background: #F2F4F7; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 34px; font-weight: 700; color: #232C64; line-height: 1">3</span><strong>Present it first</strong><span style="font-size: 15px; color: #3D4752">Get feedback at the research seminar or a student conference.</span></li>
+<li style="background: #F2F4F7; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 34px; font-weight: 700; color: #232C64; line-height: 1">4</span><strong>Submit</strong><span style="font-size: 15px; color: #3D4752">Format to the venue's guidelines and send it with your mentor's support.</span></li>
+</ol>
+
+<h3 style="margin: 0 0 16px; font-size: 20px">Where to submit</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px">
+<div style="border: 1px solid #DCE1E7; border-top: 5px solid #00AEEF; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #525D69">COMPETITION</span>
+<strong style="font-size: 18px">New York State Economics Association — Undergraduate Paper Competition</strong>
+<span style="font-size: 15px; color: #3D4752">Held at the NYSEA annual conference each fall. Deadline: [DATE]</span>
+<a href="#" style="font-weight: 600; font-size: 15px">Competition details →</a>
+</div>
+<div style="border: 1px solid #DCE1E7; border-top: 5px solid #00AEEF; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #525D69">COMPETITION</span>
+<strong style="font-size: 18px">International Atlantic Economic Society — Best Undergraduate Paper Award</strong>
+<span style="font-size: 15px; color: #3D4752">Requires a faculty mentor letter. Deadline: [DATE]</span>
+<a href="#" style="font-weight: 600; font-size: 15px">Competition details →</a>
+</div>
+<div style="border: 1px solid #DCE1E7; border-top: 5px solid #232C64; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #525D69">JOURNALS</span>
+<strong style="font-size: 18px">Undergraduate economics journals</strong>
+<span style="font-size: 15px; color: #3D4752">[Curated list of undergraduate journals, with scope and submission windows.]</span>
+<a href="#" style="font-weight: 600; font-size: 15px">See the journal list →</a>
+</div>
+<div style="border: 1px solid #DCE1E7; border-top: 5px solid #232C64; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #525D69">JOHN JAY COLLEGE</span>
+<strong style="font-size: 18px">Undergraduate Working Paper Series &amp; Research Showcase</strong>
+<span style="font-size: 15px; color: #3D4752">[Proposed] A departmental home for the best student research each year.</span>
+<a href="#" style="font-weight: 600; font-size: 15px">Browse past papers →</a>
+</div>
+</div>
+</section>
+
+<!-- 6. Funding -->
+<section id="funding" style="background: #F2F4F7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">06 · FUNDING &amp; FELLOWSHIPS</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Get paid to do research</h2>
+<p style="margin: 0 0 28px; max-width: 760px; color: #3D4752">Fellowships, grants, paid assistantships and travel funding at John Jay College, across CUNY, and beyond, with deadlines and eligibility in one directory.</p>
+
+<div style="background: #FFFFFF; border-top: 5px solid #00AEEF; padding: 28px; margin-bottom: 40px">
+<h3 style="margin: 0 0 6px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 28px">John Jay scholarships</h3>
+<p style="margin: 0 0 18px; font-size: 16px; color: #3D4752; max-width: 900px">John Jay offers institutional scholarships for undergraduate and graduate students, generally based on strong academic work and a commitment to public service. Apply through the John Jay scholarship portal with your John Jay email login.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px"><div style="border: 1px solid #DCE1E7; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">Undergraduate & graduate</span>
+<span style="font-size: 14px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">Next cycle 2027–28</span>
+</div>
+<strong style="font-size: 18px; line-height: 1.3">General Scholarship Application</strong>
+<span style="font-size: 15px; color: #3D4752">One application for currently enrolled students. The 2026–27 deadline was November 2, 2026; watch the portal for the next cycle.</span>
+<a href="https://jjay.scholarships.ngwebsolutions.com" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: 700">Details and application ↗</a>
+</div><div style="border: 1px solid #DCE1E7; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">Research</span>
+<span style="font-size: 14px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">Varies</span>
+</div>
+<strong style="font-size: 18px; line-height: 1.3">Research, Conference and Internship Scholarships</strong>
+<span style="font-size: 15px; color: #3D4752">Support for student research, presenting at professional conferences and internships. The fall 2026 round closed November 2, 2026.</span>
+<a href="https://jjay.scholarships.ngwebsolutions.com" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: 700">Details and application ↗</a>
+</div><div style="border: 1px solid #DCE1E7; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">Graduating students</span>
+<span style="font-size: 14px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">Deadline Feb 19, 2027</span>
+</div>
+<strong style="font-size: 18px; line-height: 1.3">Commencement Awards</strong>
+<span style="font-size: 15px; color: #3D4752">Awards for graduating students, applied for through the scholarship portal.</span>
+<a href="https://jjay.scholarships.ngwebsolutions.com" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: 700">Details and application ↗</a>
+</div><div style="border: 1px solid #DCE1E7; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #525D69">Study abroad</span>
+<span style="font-size: 14px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">Varies</span>
+</div>
+<strong style="font-size: 18px; line-height: 1.3">Study Abroad Scholarships</strong>
+<span style="font-size: 15px; color: #3D4752">Funding for winter, spring and summer study abroad.</span>
+<a href="https://jjay.scholarships.ngwebsolutions.com" target="_blank" rel="noopener" style="margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: 700">Details and application ↗</a>
+</div></div>
+<p style="margin: 16px 0 0; font-size: 14px; color: #525D69">Scholarship questions: Michael Scaduto, Associate Director and Scholarship Coordinator, 212.237.8872. Keep your FAFSA on file; John Jay's school code is 002693.</p>
+</div>
+
+<h3 style="margin: 0 0 14px; font-size: 20px">More research funding and fellowships</h3>
+<div role="group" aria-label="Filter funding" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px">
+<sc-for list="{{ fundTabs }}" as="t" hint-placeholder-count="5">
+<sc-if value="{{ t.active }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ t.pick }}" aria-pressed="true" style="font: inherit; font-size: 15px; font-weight: 700; min-height: 44px; padding: 0 18px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px; cursor: pointer">{{ t.label }}</button>
+</sc-if>
+<sc-if value="{{ t.inactive }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ t.pick }}" aria-pressed="false" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 18px; background: #FFFFFF; color: #1D242C; border: 1px solid #9FAAB6; border-radius: 999px; cursor: pointer">{{ t.label }}</button>
+</sc-if>
+</sc-for>
+</div>
+
+<div style="overflow-x: auto; background: #FFFFFF; border: 1px solid #DCE1E7">
+<div style="min-width: 760px">
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 1.8fr 1fr 1.4fr; gap: 12px; padding: 12px 14px; background: #232C64; color: #FFFFFF; font-size: 15px; font-weight: 700">
+<span>Opportunity</span><span>Sponsor</span><span>Eligibility</span><span>Faculty sponsor</span><span>Deadline</span>
+</div>
+<sc-for list="{{ fundRows }}" as="r" hint-placeholder-count="5">
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 1.8fr 1fr 1.4fr; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #DCE1E7; font-size: 15px">
+<a href="{{ r.url }}" target="{{ r.target }}" style="font-weight: 600">{{ r.name }}</a>
+<span>{{ r.sponsor }}</span><span>{{ r.who }}</span><span>{{ r.faculty }}</span><span>{{ r.deadline }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 7. Mentorship -->
+<section id="mentorship" style="max-width: 1240px; margin: 0 auto; padding: 64px 24px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; letter-spacing: 1.6px; color: #232C64">07 · MENTORSHIP</p>
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 38px; line-height: 1.15">Learn from people who've been there</h2>
+<p style="margin: 0 0 32px; max-width: 760px; color: #3D4752">We match undergraduates with faculty, graduate students and John Jay College alumni now in master's and Ph.D. programs.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+<div style="padding: 26px; border: 1px solid #DCE1E7; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 24px">Faculty mentors</h3>
+<p style="margin: 0; font-size: 15px; color: #3D4752">Advice on coursework, research and whether graduate school is right for you.</p>
+<a href="#" style="font-weight: 700; font-size: 15px">Request a faculty mentor →</a>
+</div>
+<div style="padding: 26px; border: 1px solid #DCE1E7; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 24px">Graduate student mentors</h3>
+<p style="margin: 0; font-size: 15px; color: #3D4752">Ph.D. students, including at the CUNY Graduate Center, share what applying and studying are really like.</p>
+<a href="#" style="font-weight: 700; font-size: 15px">Meet graduate mentors →</a>
+</div>
+<div style="padding: 26px; border: 1px solid #DCE1E7; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 24px">Alumni network</h3>
+<p style="margin: 0; font-size: 15px; color: #3D4752">John Jay College economics alumni in graduate programs and careers in policy, finance and research.</p>
+<a href="#" style="font-weight: 700; font-size: 15px">Connect with alumni →</a>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section style="border-top: 1px solid #DCE1E7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 1 1 320px">
+<h2 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 28px">Contact Information</h2>
+<p style="margin: 0; font-size: 16px">Department of Economics<br>Haaren Hall, Room 336<br>524 West 59th Street, New York, NY 10019<br>646.557.4835 · economics@jjay.cuny.edu</p>
+</div>
+<div style="flex: 1 1 320px">
+<h3 style="margin: 0 0 12px; font-size: 20px">Student Success Coordinator</h3>
+<p style="margin: 0; font-size: 16px"><strong>Rita Taveras</strong>, Academic Program Manager<br>Haaren Hall, Room 336-04<br><a href="tel:+16465574835">646.557.4835</a> · <a href="mailto:rtaveras@jjay.cuny.edu">rtaveras@jjay.cuny.edu</a></p>
+</div>
+</div>
+</section>
+
+<!-- CTA band -->
+<section style="background: #232C64; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div>
+<p style="margin: 0; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 40px; font-weight: 700">Educating for Justice.</p>
+<p style="margin: 6px 0 0; font-size: 18px; color: #E6E8F3">Start your path from the classroom to research, graduate school and beyond.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#research" style="display: flex; align-items: center; min-height: 48px; padding: 0 24px; background: #00AEEF; color: #1D242C; font-weight: 700; text-decoration: none">Find a research project</a>
+<a href="#" style="display: flex; align-items: center; min-height: 48px; padding: 0 24px; border: 2px solid #FFFFFF; color: #FFFFFF; font-weight: 700; text-decoration: none">Contact the department</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="background: #1D242C; color: #DCE1E7; font-size: 15px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px">
+<div>
+<p style="margin: 0 0 8px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF">John Jay College</p>
+<p style="margin: 0">524 West 59th Street<br>New York, NY 10019</p>
+</div>
+<div>
+<p style="margin: 0 0 8px; font-weight: 700; color: #FFFFFF">Department of Economics</p>
+<p style="margin: 0">Department of Economics<br>Haaren Hall, Room 336<br>524 West 59th Street, New York, NY 10019<br>646.557.4835 · economics@jjay.cuny.edu</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<strong style="color: #FFFFFF">The City University of New York</strong>
+<a href="https://www.cuny.edu" style="color: #DCE1E7">CUNY</a>
+<a href="https://www.gc.cuny.edu/Economics" style="color: #DCE1E7">Graduate Center Ph.D. in Economics</a>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 32px; border-top: 1px solid #3D4752; font-size: 14px; color: #CBD3DC">Design prototype for the John Jay College Department of Economics</div>
+</footer>
+
+</div>
+</template>
+<script>
+const FEATURED = [
+{cat:"Congress",title:"CHCI Congressional Internship, Summer 2027",org:"Congressional Hispanic Caucus Institute",pay:"$4,776 + housing",deadline:"Dec 1, 2026",url:"https://chci.org"},
+{cat:"Congress",title:"Senator Schumer Internships (DC & NYC)",org:"Office of Sen. Charles E. Schumer",pay:"Paid with financial need",deadline:"Spring Nov 15 · Summer Mar 15",url:"https://www.schumer.senate.gov/services/students/internships"},
+{cat:"Congress",title:"CBCF Congressional Internship, Summer 2027",org:"Congressional Black Caucus Foundation",pay:"$3,000 + housing",deadline:"See application portal",url:"https://cbcfinc.academicworks.com/opportunities/410"},
+{cat:"AEA",title:"AEA Summer Training Program 2027",org:"American Economic Association",pay:"$3,250 + travel, room & board",deadline:"Late January",url:"https://www.aeaweb.org/committees/AEASP/apply/2027"},
+{cat:"Federal Reserve",title:"Summer 2027 Academic Research Internship",org:"Federal Reserve Bank of Richmond",pay:"$23.50/hour",deadline:"Open now",url:"https://rb.wd5.myworkdayjobs.com/FRS/job/Richmond-VA/Summer-2027-Academic-Research-Internship_R-0000033215-1"},
+{cat:"Federal Reserve · Recent grads",title:"Research Assistant Program (2 years)",org:"Federal Reserve Bank of Chicago",pay:"Salaried",deadline:"Accepting applications",url:"https://www.chicagofed.org/research/research-assistant"}
+];
+const FUND = [
+{name:"Paid undergraduate research assistantships",sponsor:"Economics faculty",who:"[Eligibility]",faculty:"Yes",deadline:"Rolling",tags:["bc"],url:"#research",target:"_self"},
+{name:"AEA Summer Training Program",sponsor:"American Economic Association",who:"2+ years of college; Ph.D. interest",faculty:"2 letters",deadline:"Late January",tags:["ext","summer"],url:"https://www.aeaweb.org/committees/AEASP/apply/2027",target:"_blank"},
+{name:"Expanding Discovery in Economics+",sponsor:"Chicago Booth / PREDOC.org",who:"First- and second-year students",faculty:"No",deadline:"2027 cycle TBA",tags:["ext","summer"],url:"https://www.chicagobooth.edu/expanding-discovery-in-economics",target:"_blank"},
+{name:"CUNY Washington, DC Summer Internship (Rogowsky Program)",sponsor:"CUNY",who:"CUNY undergraduates",faculty:"Faculty liaison",deadline:"[DATE]",tags:["cuny","summer"],url:"https://www.york.cuny.edu/news/edward-t-rogowsky-internship-program-in-government-and-public-affairs",target:"_blank"},
+{name:"[Summer research fellowship]",sponsor:"[John Jay]",who:"[Eligibility]",faculty:"[Yes/No]",deadline:"[DATE]",tags:["bc","summer"],url:"#",target:"_self"},
+{name:"[Conference travel & publication funding]",sponsor:"[John Jay]",who:"[Presenting students]",faculty:"Yes",deadline:"[DATE]",tags:["bc","travel"],url:"#",target:"_self"}
+];
+const SX = "https://cunybrooklyn.scholarships.ngwebsolutions.com/ScholarX_Scholarship_Reqs.aspx?RoundId=0&AvailabilityId=";
+const SCHOL = [].map(s => Object.assign({}, s, { url: SX + s.id }));
+const STABS = [["all","All (9)"],["Undergraduate","Undergraduate (7)"],["Graduate","Graduate (2)"]];
+const TABS = [["all","All"],["bc","John Jay"],["cuny","CUNY"],["ext","External"],["summer","Summer"],["travel","Travel & conferences"]];
+const FACULTY = [{"name": "J. W. Mason", "title": "Associate Professor · Department Chair", "areas": "Macroeconomics, money and finance. Fellow at the Roosevelt Institute.", "office": "Haaren Hall 336-12 · 212.393.6863", "email": "jomason@jjay.cuny.edu", "mail": "mailto:jomason@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/j-w-mason"}, {"name": "Ian J. Seda-Irizarry", "title": "Associate Professor · Graduate Program Director", "areas": "Political economy, economic history, history of economic thought, development and macroeconomics.", "office": "Haaren Hall 336-17 · 212.393.6425", "email": "iseda@jjay.cuny.edu", "mail": "mailto:iseda@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/ian-j-seda-irizarry"}, {"name": "Geert Dhondt", "title": "Associate Professor · Economics Major/Minor Advisor", "areas": "The economics of crime and justice, including race, neoliberal capitalism and the criminal justice system.", "office": "Haaren Hall 336-13 · 646.557.4845", "email": "gdhondt@jjay.cuny.edu", "mail": "mailto:gdhondt@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/geert-dhondt"}, {"name": "Michelle Holder", "title": "Professor", "areas": "Labor economics, labor market discrimination and wage gaps.", "office": "212.393.6480", "email": "mholder@jjay.cuny.edu", "mail": "mailto:mholder@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/michelle-holder"}, {"name": "Christian Parenti", "title": "Professor", "areas": "American economic history and environmental history.", "office": "646.557.4441", "email": "cparenti@jjay.cuny.edu", "mail": "mailto:cparenti@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/christian-parenti"}, {"name": "Jay Hamilton", "title": "Associate Professor", "areas": "The economics of crime and illegal drug markets.", "office": "Haaren Hall 336-14", "email": "jhamilton@jjay.cuny.edu", "mail": "mailto:jhamilton@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/jay-hamilton"}, {"name": "Lygia Sabbag Fares", "title": "Assistant Professor", "areas": "Feminist political economy, labor economics, working time, platform work, and gender and labor markets.", "office": "", "email": "lsabbagfares@jjay.cuny.edu", "mail": "mailto:lsabbagfares@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/lygia-sabbag-fares"}, {"name": "Caitlin Kline", "title": "Assistant Professor", "areas": "Ecological economics: climate change, oceans and fisheries, extractivism and environmental justice.", "office": "646.781.5206", "email": "ckline@jjay.cuny.edu", "mail": "mailto:ckline@jjay.cuny.edu", "url": "https://www.jjay.cuny.edu/faculty/caitlin-kline"}];
+class Component extends DCLogic {
+constructor(props){ super(props); this.state = { fund: "all", sent: false, grad: "ms", schol: "all" }; }
+renderVals() {
+const f = this.state.fund;
+const sc = this.state.schol;
+return {
+scholarships: SCHOL.filter(s => sc === "all" || s.level === sc),
+scholTabs: STABS.map(t => ({ label: t[1], active: sc === t[0], inactive: sc !== t[0], pick: () => this.setState({ schol: t[0] }) })),
+faculty: FACULTY,
+showMS: this.state.grad === "ms",
+showPhD: this.state.grad === "phd",
+pickMS: () => this.setState({ grad: "ms" }),
+pickPhD: () => this.setState({ grad: "phd" }),
+featured: FEATURED,
+fundTabs: TABS.map(t => ({ label: t[1], active: f === t[0], inactive: f !== t[0], pick: () => this.setState({ fund: t[0] }) })),
+fundRows: FUND.filter(r => f === "all" || r.tags.indexOf(f) > -1),
+sent: this.state.sent,
+notSent: !this.state.sent,
+sendForm: () => this.setState({ sent: true })
+};
+}
+}
+DCLite.mount(Component);
+</script>
+</body>
+</html>
