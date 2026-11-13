@@ -103,6 +103,7 @@ a{color:#232C64}a:hover{color:#161C40}
 <a href="#funding" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Funding &amp; Fellowships</a>
 <a href="#mentorship" style="text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 16px; background: #FFFFFF; border: 1px solid #CBD3DC; border-radius: 999px">Mentorship</a>
 <a href="opportunities.html" style="text-decoration: none; font-size: 15px; font-weight: 700; padding: 10px 16px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px">All Opportunities →</a>
+<a href="funding.html" style="text-decoration: none; font-size: 15px; font-weight: 700; padding: 10px 16px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px">Funding Directory →</a>
 </div>
 </nav>
 
@@ -502,7 +503,15 @@ a{color:#232C64}a:hover{color:#161C40}
 <p style="margin: 16px 0 0; font-size: 14px; color: #525D69">Scholarship questions: Michael Scaduto, Associate Director and Scholarship Coordinator, 212.237.8872. Keep your FAFSA on file; John Jay's school code is 002693.</p>
 </div>
 
-<h3 style="margin: 0 0 14px; font-size: 20px">More research funding and fellowships</h3>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 24px; margin-bottom: 40px; background: #232C64; color: #FFFFFF">
+<div style="flex: 1 1 520px">
+<strong style="display: block; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 24px">Funding, fellowships and scholarships directory</strong>
+<span style="font-size: 16px; color: #E6E8F3">60 funding sources from the AEA and other economics associations, foundations, government programs and CUNY: scholarships, summer programs, graduate fellowships, dissertation grants and conference travel.</span>
+</div>
+<a href="funding.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #00AEEF; color: #1D242C; font-weight: 700; text-decoration: none">Browse all funding →</a>
+</div>
+
+<h3 style="margin: 0 0 14px; font-size: 20px">Featured research funding</h3>
 <div role="group" aria-label="Filter funding" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px">
 <sc-for list="{{ fundTabs }}" as="t" hint-placeholder-count="5">
 <sc-if value="{{ t.active }}" hint-placeholder-val="{{ false }}">

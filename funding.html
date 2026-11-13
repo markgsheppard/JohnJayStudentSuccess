@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>John Jay Economics: Funding Directory</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;800;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#232C64}a:hover{color:#161C40}
+*{box-sizing:border-box}
+</style>
+<script src="gate.js"></script>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="background: #1D242C; color: #7FD6F7; font-family: Arial, sans-serif; font-size: 14px; text-align: center; padding: 8px 16px">Design prototype: a proposed Student Success page for the John Jay College Department of Economics. Not an official jjay.cuny.edu page.</div>
+<div style="font-family: 'Open Sans', Arial, sans-serif; color: #1D242C; font-size: 17px; line-height: 1.55; background: #FFFFFF">
+
+<div style="background: #161C40; color: #FFFFFF; font-size: 14px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 20px">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Request Information</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Visit</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Apply</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Give</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Contact</a>
+</div>
+</div>
+
+<header style="background: #232C64; color: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<a href="index.html" style="color: #FFFFFF; text-decoration: none; display: flex; flex-direction: column; line-height: 1.1">
+<span style="font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 700">John Jay College</span>
+<span style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #7FD6F7">The City University of New York</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 16px; font-weight: 600">
+<a href="#" style="color: #FFFFFF; text-decoration: none">Academics</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Admissions &amp; Aid</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Student Life</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">About</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Info For</a>
+</nav>
+</div>
+<div style="height: 5px; background: #00AEEF"></div>
+</header>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px 0; font-size: 14px; color: #525D69">
+<a href="#" style="text-decoration: none">Home</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href="#" style="text-decoration: none">Economics</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<a href="index.html" style="text-decoration: none">Student Success &amp; Graduate Pathways</a>
+<span aria-hidden="true" style="padding: 0 8px">›</span>
+<span>Funding Directory</span>
+</div>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 24px">
+<a href="index.html" style="display: inline-block; margin-bottom: 14px; font-size: 15px; font-weight: 700; text-decoration: none">← Back to Student Success &amp; Graduate Pathways</a>
+<h1 style="margin: 0 0 12px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 48px; line-height: 1.1">Funding, Fellowships &amp; Scholarships</h1>
+<p style="margin: 0 0 8px; font-size: 19px; color: #3D4752; max-width: 860px">Money for economics students at every stage: scholarships for school, funded summer programs, graduate fellowships, dissertation grants, and travel funding for conferences. Compiled from economics associations, foundations, government programs and CUNY.</p>
+<p style="margin: 0; font-size: 14px; color: #525D69">Last updated November 12, 2026. Deadlines shown are the usual timing and change from year to year, so confirm dates, amounts and eligibility on each official page before applying.</p>
+</section>
+
+<div style="background: #F2F4F7; border-top: 1px solid #DCE1E7; border-bottom: 1px solid #DCE1E7">
+<div style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
+<div role="group" aria-label="Filter by category" style="display: flex; flex-wrap: wrap; gap: 10px">
+<sc-for list="{{ cats }}" as="c" hint-placeholder-count="6">
+<sc-if value="{{ c.active }}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{ c.pick }}" aria-pressed="true" style="font: inherit; font-size: 15px; font-weight: 700; min-height: 44px; padding: 0 18px; background: #232C64; color: #FFFFFF; border: 1px solid #232C64; border-radius: 999px; cursor: pointer">{{ c.label }} ({{ c.count }})</button>
+</sc-if>
+<sc-if value="{{ c.inactive }}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{ c.pick }}" aria-pressed="false" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 18px; background: #FFFFFF; color: #1D242C; border: 1px solid #9FAAB6; border-radius: 999px; cursor: pointer">{{ c.label }} ({{ c.count }})</button>
+</sc-if>
+</sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: flex-end">
+<label for="opp-search" style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700">Search
+<input id="opp-search" type="search" value="{{ q }}" onChange="{{ onSearch }}" placeholder="Organization, topic, award…" style="font: inherit; font-weight: 400; min-height: 44px; padding: 8px 12px; border: 1px solid #9FAAB6; background: #FFFFFF"></label>
+<label for="opp-level" style="flex: 0 1 240px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700">Who can apply
+<select id="opp-level" value="{{ level }}" onChange="{{ onLevel }}" style="font: inherit; font-weight: 400; min-height: 44px; padding: 8px 12px; border: 1px solid #9FAAB6; background: #FFFFFF">
+<option value="all">Everyone</option>
+<option value="Undergraduate">Current undergraduates</option>
+<option value="Recent graduate">Recent graduates</option>
+<option value="Graduate">Graduate students (master's and Ph.D.)</option>
+</select></label>
+
+</div>
+</div>
+</div>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px">
+<p style="margin: 0 0 18px; font-size: 15px; font-weight: 700; color: #3D4752" aria-live="polite">{{ resultLabel }}</p>
+<sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+<div style="padding: 32px; background: #F2F4F7; text-align: center">
+<p style="margin: 0 0 12px; font-size: 18px; font-weight: 700">No postings match those filters.</p>
+<button type="button" onClick="{{ reset }}" style="font: inherit; font-weight: 700; min-height: 44px; padding: 0 20px; background: #232C64; color: #FFFFFF; border: 0; cursor: pointer">Clear filters</button>
+</div>
+</sc-if>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px">
+<sc-for list="{{ items }}" as="it" hint-placeholder-count="6">
+<article style="border: 1px solid #DCE1E7; border-top: 5px solid #232C64; padding: 22px; display: flex; flex-direction: column; gap: 10px; background: #FFFFFF">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; color: #525D69; text-transform: uppercase">{{ it.cat }}</span>
+<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; background: #D6F1FC; color: #10325A">{{ it.levelLabel }}</span>
+</div>
+<h2 style="margin: 0; font-size: 20px; line-height: 1.25">{{ it.title }}</h2>
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #232C64">{{ it.org }}</p>
+<p style="margin: 0; font-size: 15px; color: #3D4752">{{ it.who }}</p>
+<dl style="margin: 0; display: grid; grid-template-columns: 96px 1fr; gap: 4px 12px; font-size: 15px">
+<dt style="font-weight: 700; color: #525D69">Award</dt><dd style="margin: 0">{{ it.amount }}</dd>
+<dt style="font-weight: 700; color: #525D69">Deadline</dt><dd style="margin: 0">{{ it.deadline }}</dd>
+</dl>
+<div style="margin-top: auto; padding-top: 8px">
+<a href="{{ it.url }}" target="{{ it.target }}" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; background: #232C64; color: #FFFFFF; font-weight: 700; text-decoration: none">{{ it.cta }}</a>
+</div>
+</article>
+</sc-for>
+</div>
+
+<div style="margin-top: 40px; padding: 24px; background: #F2F4F7; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<div style="flex: 1 1 520px">
+<strong style="display: block; font-size: 18px">Know of a funding source we're missing?</strong>
+<span style="font-size: 15px; color: #3D4752">Faculty, alumni and employers can send postings to Rita Taveras, Academic Program Manager (646.557.4835).</span>
+</div>
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #232C64; font-weight: 700; text-decoration: none">Back to Student Success</a>
+</div>
+</section>
+
+<footer style="background: #1D242C; color: #DCE1E7; font-size: 15px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px">
+<div>
+<p style="margin: 0 0 8px; font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF">John Jay College</p>
+<p style="margin: 0">524 West 59th Street<br>New York, NY 10019</p>
+</div>
+<div>
+<p style="margin: 0 0 8px; font-weight: 700; color: #FFFFFF">Department of Economics</p>
+<p style="margin: 0">Department of Economics<br>Haaren Hall, Room 336<br>524 West 59th Street, New York, NY 10019<br>646.557.4835 · economics@jjay.cuny.edu</p>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 32px; border-top: 1px solid #3D4752; font-size: 14px; color: #CBD3DC">Design prototype for the John Jay College Department of Economics</div>
+</footer>
+</div>
+</template>
+<script>
+const FUNDS = [
+{"title": "AEA Summer Training Program and Scholarship", "org": "American Economic Association · American University", "cat": "Economics associations", "levels": ["Undergraduate", "Recent graduate"], "amount": "All costs covered plus a $3,250 stipend", "deadline": "January 31 each year", "who": "Two-month residential program that prepares undergraduates for economics Ph.D. programs. Covers tuition, housing, travel and books.", "url": "https://www.aeaweb.org/about-aea/committees/aeasp"},
+{"title": "AEA Mentoring Program", "org": "AEA Committee on the Status of Minority Groups in the Economics Profession", "cat": "Economics associations", "levels": ["Graduate", "Recent graduate"], "amount": "Mentoring plus research and travel funding", "deadline": "Applications early in the year", "who": "Pairs students accepted to or enrolled in economics Ph.D. programs with mentors; participants can apply for research and travel support.", "url": "https://www.aeaweb.org/about-aea/committees/csmgep/mentoring"},
+{"title": "AEA Summer Economics Fellows Program", "org": "American Economic Association", "cat": "Economics associations", "levels": ["Graduate"], "amount": "Paid summer residency", "deadline": "Portal opens December 1, closes about February 1", "who": "Senior graduate students spend a summer in residence at a sponsoring institution such as a Federal Reserve Bank, the Census Bureau or the Bureau of Labor Statistics.", "url": "https://www.aeaweb.org/about-aea/committees/summer-fellows-program"},
+{"title": "Andrew Brimmer Undergraduate Essay Prize", "org": "American Economic Association · CSMGEP", "cat": "Economics associations", "levels": ["Undergraduate"], "amount": "$1,000", "deadline": "Second Friday of October", "who": "For the best undergraduate essay on the economic well-being of Black Americans. Open to economics, political science and public policy majors.", "url": "https://www.aeaweb.org/about-aea/honors-awards/brimmer-undergrad-essay-prize"},
+{"title": "Frank W. Taussig Article Award", "org": "Omicron Delta Epsilon (economics honor society)", "cat": "Economics associations", "levels": ["Undergraduate", "Recent graduate"], "amount": "Cash prize and publication in The American Economist", "deadline": "See ODE site", "who": "For the best article by an undergraduate or recent graduate at a school with an ODE chapter.", "url": "https://www.omicrondeltaepsilon.org"},
+{"title": "ODE Graduate Research Award and Irving Fisher Award", "org": "Omicron Delta Epsilon", "cat": "Economics associations", "levels": ["Graduate"], "amount": "Up to $2,000 and journal submission", "deadline": "November 1 for the graduate research award", "who": "For ODE members who are graduate students; papers are presented at the ODE graduate session at the ASSA meetings.", "url": "https://www.omicrondeltaepsilon.org"},
+{"title": "National Economic Association awards and programs", "org": "National Economic Association", "cat": "Economics associations", "levels": ["Undergraduate", "Graduate"], "amount": "Varies", "deadline": "See NEA site", "who": "The NEA supports Black economists and research on the economic status of Black communities. Check its awards, conference sessions and student opportunities.", "url": "https://neaecon.org"},
+{"title": "ASHE Dissertation Award", "org": "American Society of Hispanic Economists", "cat": "Economics associations", "levels": ["Graduate"], "amount": "Dissertation award", "deadline": "See ASHE site", "who": "Annual award for doctoral students, plus a mentoring program and conference sessions.", "url": "https://asheweb.org"},
+{"title": "Rhonda Williams Prize", "org": "International Association for Feminist Economics", "cat": "Economics associations", "levels": ["Graduate"], "amount": "Travel support to the IAFFE conference", "deadline": "See IAFFE site", "who": "Supports scholars from underrepresented groups in presenting a paper at the annual IAFFE conference.", "url": "https://www.iaffe.org/rhonda-williams-prize"},
+{"title": "URPE Dissertation Fellowship", "org": "Union for Radical Political Economics", "cat": "Economics associations", "levels": ["Graduate"], "amount": "About $6,500", "deadline": "Late spring", "who": "For doctoral candidates with an approved dissertation proposal in radical political economics.", "url": "https://urpe.org"},
+{"title": "Economic History Association grants and fellowships", "org": "Economic History Association", "cat": "Economics associations", "levels": ["Graduate"], "amount": "Travel grants and dissertation fellowships", "deadline": "Winter", "who": "Exploratory travel grants, data grants and dissertation fellowships for graduate students in economic history.", "url": "https://eh.net/eha/grants-and-fellowships/"},
+{"title": "CSWEP opportunities list", "org": "AEA Committee on the Status of Women in the Economics Profession", "cat": "Economics associations", "levels": ["Undergraduate", "Graduate"], "amount": "Varies", "deadline": "Rolling", "who": "A maintained list of conferences, fellowships and mentoring programs for women in economics at every stage.", "url": "https://www.aeaweb.org/about-aea/committees/cswep"},
+{"title": "Expanding Discovery in Economics+ (EDE+)", "org": "University of Chicago Booth School of Business", "cat": "Pipeline & summer programs", "levels": ["Undergraduate"], "amount": "Travel and housing covered", "deadline": "Winter", "who": "Summer institute for first- and second-year undergraduates exploring economics.", "url": "https://www.chicagobooth.edu/expanding-discovery-in-economics"},
+{"title": "PPIA Junior Summer Institute", "org": "Public Policy and International Affairs Program", "cat": "Pipeline & summer programs", "levels": ["Undergraduate"], "amount": "Full tuition, travel help and a stipend", "deadline": "Typically early November", "who": "Seven-week, fully funded summer program in economics, statistics and policy analysis for juniors headed to public service. Alumni get graduate school benefits.", "url": "https://ppiaprogram.org"},
+{"title": "Leadership Alliance Summer Research Program", "org": "The Leadership Alliance", "cat": "Pipeline & summer programs", "levels": ["Undergraduate"], "amount": "Stipend, housing and travel", "deadline": "Typically February 1", "who": "Eight- to ten-week mentored research at member universities, including social science placements.", "url": "https://theleadershipalliance.org"},
+{"title": "NSF Research Experiences for Undergraduates", "org": "National Science Foundation", "cat": "Pipeline & summer programs", "levels": ["Undergraduate"], "amount": "Stipend, usually with housing", "deadline": "Varies by site, often January to March", "who": "Funded summer research at universities nationwide. Search for social, behavioral and economic sciences sites.", "url": "https://www.nsf.gov/crssprgm/reu/"},
+{"title": "Research in Color Foundation mentorship", "org": "Research in Color Foundation", "cat": "Pipeline & summer programs", "levels": ["Undergraduate", "Recent graduate"], "amount": "Mentoring and application support", "deadline": "See site", "who": "Mentors undergraduates and master's students from underrepresented backgrounds who plan to apply to economics Ph.D. programs.", "url": "https://www.researchincolor.org"},
+{"title": "The Sadie Collective", "org": "The Sadie Collective", "cat": "Pipeline & summer programs", "levels": ["Undergraduate", "Graduate"], "amount": "Conference and programs", "deadline": "See site", "who": "Programs, mentorship and an annual conference for Black women in economics, finance, data science and policy.", "url": "https://www.sadiecollective.org"},
+{"title": "PREDOC.org pre-doctoral positions", "org": "Pathways to Research and Doctoral Careers", "cat": "Pipeline & summer programs", "levels": ["Recent graduate"], "amount": "Salaried one- to two-year research jobs", "deadline": "Rolling", "who": "Full-time research positions at universities that bridge college and a Ph.D., plus guides on applying.", "url": "https://www.predoc.org"},
+{"title": "Stone Center Summer Institute on Inequality", "org": "UC Berkeley Stone Center on Wealth and Income Inequality", "cat": "Pipeline & summer programs", "levels": ["Graduate"], "amount": "See program page", "deadline": "See site", "who": "Summer institute on inequality research for graduate students.", "url": "https://stonecenter.berkeley.edu"},
+{"title": "NSF Graduate Research Fellowship Program", "org": "National Science Foundation", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Graduate"], "amount": "Three years of stipend and tuition support", "deadline": "Fall; check the current solicitation", "who": "For seniors and early graduate students entering research-based programs. Economics is eligible under social sciences.", "url": "https://www.nsfgrfp.org"},
+{"title": "Paul and Daisy Soros Fellowships for New Americans", "org": "Paul & Daisy Soros Fellowships", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Graduate"], "amount": "Up to $90,000 over two years", "deadline": "Late October", "who": "Graduate school funding for immigrants and children of immigrants.", "url": "https://www.pdsoros.org"},
+{"title": "Harry S. Truman Scholarship", "org": "Truman Scholarship Foundation", "cat": "Graduate school fellowships", "levels": ["Undergraduate"], "amount": "$30,000 toward graduate school", "deadline": "Early February; needs campus nomination", "who": "For juniors committed to careers in public service.", "url": "https://www.truman.gov"},
+{"title": "Rangel Graduate Fellowship and Summer Enrichment Program", "org": "Charles B. Rangel International Affairs Program", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Recent graduate"], "amount": "Graduate funding; paid summer program", "deadline": "Fall for the fellowship; winter for summer program", "who": "Funds a two-year master's degree for students entering the Foreign Service. The summer program is for undergraduates.", "url": "https://rangelprogram.org"},
+{"title": "Pickering Foreign Affairs Fellowship", "org": "U.S. Department of State", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Recent graduate"], "amount": "Two years of graduate funding", "deadline": "Fall", "who": "Funds a master's degree in fields including economics for students entering the Foreign Service.", "url": "https://pickeringfellowship.org"},
+{"title": "Payne International Development Fellowship", "org": "USAID Donald M. Payne Program", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Recent graduate"], "amount": "Two years of graduate funding", "deadline": "Fall", "who": "Funds graduate study in fields including economics and development for future international development careers.", "url": "https://www.paynefellows.org"},
+{"title": "Fulbright U.S. Student Program", "org": "U.S. Department of State", "cat": "Graduate school fellowships", "levels": ["Undergraduate", "Recent graduate", "Graduate"], "amount": "Travel, living stipend and often tuition", "deadline": "October; campus deadlines earlier", "who": "A year of study, research or teaching abroad after graduation.", "url": "https://us.fulbrightonline.org"},
+{"title": "AAUW fellowships and grants", "org": "American Association of University Women", "cat": "Graduate school fellowships", "levels": ["Graduate"], "amount": "Varies by program", "deadline": "Fall", "who": "Fellowships for women in graduate study, including dissertation and career development awards.", "url": "https://www.aauw.org/resources/programs/fellowships-grants/"},
+{"title": "Humane Studies Fellowship", "org": "Institute for Humane Studies", "cat": "Graduate school fellowships", "levels": ["Graduate"], "amount": "Up to $15,000", "deadline": "Several rounds a year", "who": "For full-time Ph.D. students whose research engages classical liberal ideas.", "url": "https://www.theihs.org"},
+{"title": "NBER dissertation fellowships", "org": "National Bureau of Economic Research", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Stipend and tuition for an academic year", "deadline": "Posted each fall; Gender in the Economy closes January 20, 2027", "who": "Topic-specific fellowships for doctoral students, for example gender in the economy, aging, energy and household finance.", "url": "https://www.nber.org/career-resources"},
+{"title": "Federal Reserve Board Dissertation Fellowships", "org": "Board of Governors of the Federal Reserve System", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Paid 12-week residency", "deadline": "See careers page", "who": "Ph.D. students work on their own dissertation research on site in Washington, DC.", "url": "https://www.federalreserve.gov/careers-dissertation-fellows.htm"},
+{"title": "St. Louis Fed Ph.D. Dissertation Fellowships", "org": "Federal Reserve Bank of St. Louis", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Paid fellowship", "deadline": "See site", "who": "Dissertation fellow positions in the research division for economics Ph.D. students.", "url": "https://www.stlouisfed.org/careers/yourcareer/opportunities/phd-dissertation-fellowships"},
+{"title": "Equitable Growth research grants", "org": "Washington Center for Equitable Growth", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Doctoral grants of about $15,000", "deadline": "Early in the year", "who": "Funds doctoral research on how inequality affects economic growth and stability.", "url": "https://equitablegrowth.org/grants/"},
+{"title": "Russell Sage Foundation dissertation grants and summer institutes", "org": "Russell Sage Foundation", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Dissertation research grants; funded institutes", "deadline": "Varies by program", "who": "Small grants for doctoral research on inequality, work, race and behavioral economics, plus summer institutes.", "url": "https://www.russellsage.org"},
+{"title": "Horowitz Foundation grants", "org": "Horowitz Foundation for Social Policy", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Dissertation grants", "deadline": "December 1", "who": "For Ph.D. candidates whose dissertations address social policy problems.", "url": "https://www.horowitz-foundation.org"},
+{"title": "C. Lowell Harriss Dissertation Fellowship", "org": "Lincoln Institute of Land Policy", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "$10,000", "deadline": "March", "who": "For dissertations on land and tax policy, including public finance and urban economics.", "url": "https://www.lincolninst.edu"},
+{"title": "Stone Center on Socio-Economic Inequality", "org": "CUNY Graduate Center", "cat": "Dissertation & research grants", "levels": ["Graduate"], "amount": "Scholar and postdoctoral positions", "deadline": "See site", "who": "Research center on inequality that supports Graduate Center doctoral students and postdoctoral scholars.", "url": "https://stonecenter.gc.cuny.edu"},
+{"title": "Undergraduate conferences and paper competitions", "org": "Eastern, Midwest and International Atlantic economic associations; Carroll Round", "cat": "Travel, conferences & prizes", "levels": ["Undergraduate"], "amount": "Presentation slots and cash prizes", "deadline": "Eastern: early November · IAES: June 15", "who": "Associations with undergraduate sessions and best-paper awards. The AEA keeps a list, along with undergraduate journals that publish student research.", "url": "https://www.aeaweb.org/resources/students/undergrad-research"},
+{"title": "IAES Best Undergraduate Paper Award", "org": "International Atlantic Economic Society", "cat": "Travel, conferences & prizes", "levels": ["Undergraduate"], "amount": "Prize and conference presentation", "deadline": "June 15", "who": "Annual undergraduate paper competition judged at the International Atlantic Economic Conference.", "url": "https://www.iaes.org/bupa/"},
+{"title": "APPAM Equity and Inclusion Fellowship", "org": "Association for Public Policy Analysis and Management", "cat": "Travel, conferences & prizes", "levels": ["Undergraduate", "Graduate"], "amount": "Conference travel and registration", "deadline": "Summer", "who": "Supports students from underrepresented backgrounds in attending the APPAM fall research conference.", "url": "https://www.appam.org"},
+{"title": "NTA Equity and Inclusion Travel Fellowship", "org": "National Tax Association", "cat": "Travel, conferences & prizes", "levels": ["Graduate"], "amount": "Conference travel funding", "deadline": "See NTA site", "who": "Travel funding to the NTA annual conference for students and early-career researchers in public finance.", "url": "https://ntanet.org"},
+{"title": "AAEA travel grants", "org": "Agricultural and Applied Economics Association", "cat": "Travel, conferences & prizes", "levels": ["Graduate"], "amount": "Housing and transportation support", "deadline": "Spring", "who": "Helps graduate students attend the AAEA annual meeting.", "url": "https://www.aaea.org"},
+{"title": "INET Young Scholars Initiative", "org": "Institute for New Economic Thinking", "cat": "Travel, conferences & prizes", "levels": ["Undergraduate", "Graduate"], "amount": "Workshop travel support", "deadline": "Rolling", "who": "A global community of young scholars with funded workshops, working groups and conferences.", "url": "https://www.ineteconomics.org/ysi"},
+{"title": "HES Young Scholars Program", "org": "History of Economics Society", "cat": "Travel, conferences & prizes", "levels": ["Graduate"], "amount": "Conference travel and registration", "deadline": "See HES site", "who": "Supports young scholars presenting at the History of Economics Society annual conference.", "url": "https://historyofeconomics.org"},
+{"title": "Jack Kent Cooke Undergraduate Transfer Scholarship", "org": "Jack Kent Cooke Foundation", "cat": "National scholarships", "levels": ["Undergraduate"], "amount": "Up to $55,000 a year", "deadline": "Winter", "who": "For community college students transferring to a four-year college.", "url": "https://www.jkcf.org"},
+{"title": "Benjamin A. Gilman International Scholarship", "org": "U.S. Department of State", "cat": "National scholarships", "levels": ["Undergraduate"], "amount": "Up to $5,000 for study abroad", "deadline": "Two cycles a year", "who": "For Pell Grant recipients studying or interning abroad.", "url": "https://www.gilmanscholarship.org"},
+{"title": "Jeannette K. Watson Fellowship", "org": "Thomas J. Watson Foundation", "cat": "National scholarships", "levels": ["Undergraduate"], "amount": "Three years of paid summer internships", "deadline": "Campus nomination, usually winter", "who": "For first- and second-year students at partner New York City colleges. Ask your fellowships office whether your college takes part.", "url": "https://watson.foundation/fellowships/jk"},
+{"title": "Hispanic Scholarship Fund", "org": "HSF", "cat": "National scholarships", "levels": ["Undergraduate", "Graduate"], "amount": "$500 to $5,000", "deadline": "Winter", "who": "Merit scholarships for students of Hispanic heritage, undergraduate and graduate.", "url": "https://www.hsf.net"},
+{"title": "UNCF scholarships", "org": "UNCF", "cat": "National scholarships", "levels": ["Undergraduate", "Graduate"], "amount": "Varies", "deadline": "Rolling", "who": "Hundreds of scholarship programs, many open to students at any college.", "url": "https://uncf.org/scholarships"},
+{"title": "APIA Scholars", "org": "APIA Scholars", "cat": "National scholarships", "levels": ["Undergraduate"], "amount": "$2,500 to $20,000", "deadline": "Winter", "who": "Scholarships for Asian American and Pacific Islander undergraduates.", "url": "https://apiascholars.org"},
+{"title": "The Roothbert Fund", "org": "The Roothbert Fund", "cat": "National scholarships", "levels": ["Undergraduate", "Graduate"], "amount": "Small grants toward school costs", "deadline": "Early February", "who": "Supplementary grants that can help with books and expenses, for students in the eastern United States.", "url": "https://www.roothbertfund.org/scholarships"},
+{"title": "Excelsior Scholarship", "org": "New York State", "cat": "CUNY & New York", "levels": ["Undergraduate"], "amount": "Tuition-free at CUNY", "deadline": "Set each semester", "who": "For New York residents with family income of $125,000 or less. File the FAFSA and TAP first.", "url": "https://www.hesc.ny.gov"},
+{"title": "TheDream.US National Scholarship", "org": "TheDream.US", "cat": "CUNY & New York", "levels": ["Undergraduate"], "amount": "Up to $29,000 toward a degree", "deadline": "See site", "who": "For immigrant students with or without DACA or TPS attending partner colleges, including CUNY campuses.", "url": "https://www.thedream.us"},
+{"title": "CUNY Pipeline Program", "org": "CUNY Graduate Center", "cat": "CUNY & New York", "levels": ["Undergraduate"], "amount": "Stipend and summer research institute", "deadline": "Spring of junior year", "who": "Prepares CUNY undergraduates from underrepresented groups for Ph.D. programs and academic careers.", "url": "https://www.gc.cuny.edu"},
+{"title": "Graduate Center Fellowship", "org": "CUNY Graduate Center", "cat": "CUNY & New York", "levels": ["Graduate"], "amount": "$29,374 a year plus tuition", "deadline": "With the Ph.D. application", "who": "Five-year funding package for admitted Ph.D. students, including economics.", "url": "https://www.gc.cuny.edu/Economics"},
+{"title": "NYC Urban Fellows Program", "org": "City of New York", "cat": "CUNY & New York", "levels": ["Recent graduate"], "amount": "Paid nine-month fellowship", "deadline": "Winter", "who": "Recent graduates work in city government agencies and the Mayor's office.", "url": "https://www.nyc.gov/site/dcas/employment/urban-fellows.page"},
+{"title": "CUNY Washington, DC Summer Internship (Rogowsky Program)", "org": "City University of New York", "cat": "CUNY & New York", "levels": ["Undergraduate"], "amount": "Stipend and housing", "deadline": "Through your campus liaison", "who": "CUNY undergraduates intern in Washington, DC, Albany and New York City government offices.", "url": "https://www.york.cuny.edu/news/edward-t-rogowsky-internship-program-in-government-and-public-affairs"},
+{"title": "John Jay General Scholarship Application", "org": "John Jay College", "cat": "CUNY & New York", "levels": ["Undergraduate", "Graduate"], "amount": "Varies by award", "deadline": "2026–27 closed November 2, 2026; next cycle on the portal", "who": "One application for John Jay's institutional scholarships, based on academic work and commitment to public service.", "url": "https://jjay.scholarships.ngwebsolutions.com"},
+{"title": "Research, Conference and Internship Scholarships", "org": "John Jay College", "cat": "CUNY & New York", "levels": ["Undergraduate", "Graduate"], "amount": "Varies", "deadline": "See the scholarship portal", "who": "Support for student research, presenting at professional conferences and internships.", "url": "https://jjay.scholarships.ngwebsolutions.com"},
+{"title": "Office for Student Research and Creativity", "org": "John Jay College", "cat": "CUNY & New York", "levels": ["Undergraduate"], "amount": "Research funding and support", "deadline": "See office page", "who": "Funds and supports student-faculty collaborative research in all disciplines.", "url": "https://www.jjay.cuny.edu/node/1778"}
+];
+const CATS = ["All", "Economics associations", "Pipeline & summer programs", "Graduate school fellowships", "Dissertation & research grants", "Travel, conferences & prizes", "National scholarships", "CUNY & New York"];
+class Component extends DCLogic {
+  constructor(props){ super(props); this.state = { cat: "All", level: "all", q: "" }; }
+  renderVals() {
+    const s = this.state;
+    const q = (s.q || "").toLowerCase().trim();
+    const base = FUNDS.filter(o => (s.level === "all" || o.levels.indexOf(s.level) > -1) && (!q || (o.title + " " + o.org + " " + o.who + " " + o.amount + " " + o.cat).toLowerCase().indexOf(q) > -1));
+    const items = base.filter(o => s.cat === "All" || o.cat === s.cat).map(o => {
+      const ext = o.url.indexOf("http") === 0;
+      return Object.assign({}, o, { levelLabel: o.levels.join(" · "), target: ext ? "_blank" : "_self", cta: ext ? "Details and how to apply ↗" : "See the list →" });
+    });
+    const cats = CATS.map(c => ({ label: c, count: c === "All" ? base.length : base.filter(o => o.cat === c).length, active: s.cat === c, inactive: s.cat !== c, pick: () => this.setState({ cat: c }) }));
+    return {
+      items, cats, q: s.q, level: s.level, empty: items.length === 0,
+      resultLabel: "Showing " + items.length + " of " + FUNDS.length + " funding opportunities",
+      onSearch: (e) => this.setState({ q: e.target.value }),
+      onLevel: (e) => this.setState({ level: e.target.value }),
+      reset: () => this.setState({ cat: "All", level: "all", q: "" })
+    };
+  }
+}
+DCLite.mount(Component);
+</script>
+</body>
+</html>
