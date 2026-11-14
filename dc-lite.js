@@ -45,7 +45,9 @@
       if (lookup(holeOf(node, "value"), scope)) node.childNodes.forEach(c => build(c, scope, out));
       return;
     }
-    const el = document.createElement(tag);
+    // Inline SVG must be created in its own namespace or the browser will not draw it.
+    const ns = node.namespaceURI;
+    const el = ns && ns !== "http://www.w3.org/1999/xhtml" ? document.createElementNS(ns, node.localName) : document.createElement(tag);
     let pendingValue;
     for (const a of Array.from(node.attributes)) {
       const n = a.name, val = a.value;
